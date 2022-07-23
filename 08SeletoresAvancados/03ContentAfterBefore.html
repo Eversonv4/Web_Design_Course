@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Everson" />
+    <meta name="description" content="importante adicionar uma descrição da sua página, ela é aquele textinho que aparece abaixo dos links quando pesquisamos algo no google" />
+    <meta name="keywords" content="html5, tecnologia, web, etc." />
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
+    <!-- <script src='main.js'></script> -->
+    <style>
+      body { font-family: tahoma, sans-serif;}
+      div {
+        border: 3px solid red;
+        padding: 25px;
+        margin: 25px;
+      }
+      .div1:before {
+        content:"'texto before'";
+        background: aquamarine;
+      }
+      .div1:after {
+        content:"'texto after'";
+        background: aquamarine;
+      }
+
+
+      .div2 {position: relative;}
+      .div2:before {
+        content:"'texto before'";
+        background: aquamarine;
+      }
+      .div2:after {
+        content:"";
+        background: #179ae6;
+        width: 25px;
+        height: 25px;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <pre>
+      div:before {
+        content: "";
+      }
+
+      div:after {
+        content: "";
+      }
+    </pre>
+
+    <p>Sempre que for usar essas pseudo-classes, tem que usar o content, mesmo que seja vazio. tem que ter.</p>
+    <p>Esse texto inserido por css dentro do content não pode ser selecionado e nem é usado pelos mecanismos de busca. Então esse conteúdo before ou after, deve ser usado de preferência para conteúdos visuais ou estilos. É o que faz mais sentido.</p>
+    <p>Por mais que não seja colocado nada dentro do content, existe algo lá e esse elemento é do tipo inline, ou seja, são elementos do tipo linha, como as tags <'b>, <'em>, <'i>, etc.</p>
+
+    <h2>Exemplo</h2>
+
+    <div class="div1"> Texto principal da div </div>
+    <div class="div2"> Texto principal da div </div>
+
+    <article>
+      <p> antes do título </p>
+      <h3>
+        Título
+      </h3>
+      <p>Parágrafo <a href="#">Apenas um link com <b>negrito</b></a></p>
+      <p>Parágrafo <a href="#">Apenas um link com <b>negrito</b></a></p>
+      <p>Parágrafo <a href="#">Apenas um link com <b>negrito</b></a></p>
+    </article>
+
+    <ul>
+      <li><a href="#">Link Falso</a></li>
+      <li><a href="#">Link Falso</a></li>
+      <li><a href="https://instagram.com">Link externo</a></li>
+    </ul>
+  </body>
+</html>

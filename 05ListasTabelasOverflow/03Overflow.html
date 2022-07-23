@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que se deve ser renderizada -->
+
+<html lang="pt-br">
+  <head>
+    <title>Overflow</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Everson" />
+    <meta name="description" content="importante adicionar uma descrição da sua página, ela é aquele textinho que aparece abaixo dos links quando pesquisamos algo no google" />
+    <meta name="keywords" content="html5, tecnologia, web, etc." />
+    <style>
+      body {
+        line-height: 28px;
+      }
+
+      a {
+        color: #253b3a;
+      }
+
+      dt {
+        font-size: 22px;
+        font-weight: bold;
+      }
+
+      div{
+        padding: 2%;
+        margin: 50px 2%;
+        border: 1px solid black;
+        width: 17%;
+        float: left;
+        height: 100px;
+        font-family: sans-serif;
+        font-size: 18px;
+      }
+            
+      .div1{
+        overflow: visible;
+      }
+            
+      .div2{
+        overflow: hidden;
+      }
+            
+      .div3{
+        overflow: scroll;
+      }
+            
+      .div4{
+        overflow: auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1><a href="https://www.w3schools.com/css/css_overflow.asp">Overflow</a></h1>
+    <h3>Nota: A propriedade overflow só funciona para elementos de bloco com uma altura especificada.</h3>
+
+    <p>Essa propriedade Overflow, serve para tratar o conteúdo que excede determinado elemento. Ela também serve para controlar o que acontece ao conteúdo que é grande demais para encaixar em uma área.</p>
+
+      <dl>
+        <dt>Visible</dt>
+          <dd>
+            Valor padrão. O excesso de conteúdo(overflow) não é cortado. O conteúdo é renderizado fora da caixa do elemento.
+            <p><b>Exemplo:</b> div { width: 200px; height: 50px; background-color: #eee; <b>overflow: visible</b> ;}</p>
+          </dd>
+
+        <dt>Hidden</dt>
+          <dd>
+            Aqui o excesso de conteúdo(overflow) é cortado, e o resto do conteúdo cortado é escondido.
+          <p><b>Exemplo: </b>div { overflow: hidden ;}</p>
+          </dd>
+        
+
+        <dt>Scroll</dt>
+          <dd>
+            Selecionando Scroll, o excesso de conteúdo é cortado e será adicionado uma scrollbar dentro da caixa. Perceba que isso vai adicionar uma scrollbar tanto na vertical quanto na horizontal, mesmo que não precise.
+          <p><b>Exemplo: </b>div { overflow: scroll ;}</p>
+          </dd>
+        
+        <dt>Auto</dt>
+          <dd>
+            É semelhante ao Scroll, mas adiciona uma scrollbar se necessário. Engloba todo o conteúdo em excesso.
+            <p><b>Exemplo: </b>div { overflow: auto ;}</p>
+          </dd>
+      </dl>
+      <br />
+    <h2>Exemplos</h2>
+      <div class="div1">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis excepturi, ducimus officia! Earum dicta provident dolor fuga rem, nisi ullam veniam cumque, repudiandae eligendi dignissimos accusamus ratione vero. Corrupti, impedit?</p>
+      </div>
+    
+      <div class="div2">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis excepturi, ducimus officia! Earum dicta provident dolor fuga rem, nisi ullam veniam cumque, repudiandae eligendi dignissimos accusamus ratione vero. Corrupti, impedit?</p>
+      </div>
+    
+      <div class="div3">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+      </div>
+    
+      <div class="div4">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+      </div>
+  </body>
+</html>

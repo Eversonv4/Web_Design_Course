@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que se deve ser renderizada -->
+
+<html lang="pt-br">
+  <head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Everson" />
+    <meta name="description" content="importante adicionar uma descrição da sua página, ela é aquele textinho que aparece abaixo dos links quando pesquisamos algo no google" />
+    <meta name="keywords" content="html5, tecnologia, web, etc." />
+    <style>
+      @font-face {
+        font-family: 'everson';
+        src: url(./TravelingTypewriter.otf);
+        /* src: url(./zapfinoextralt-one.ttf) format('truetype'),
+              url(./RIVERFLOWS.otf) format('otf'); */
+      }
+      body {
+        font-family: everson, tahoma;
+      }
+      h1 {
+        text-align: center;
+        font-size: 50px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Fonts Customizadas</h1>
+    <p>As vezes queremos usar uma fonte que não está instalada na máquina do usuário. Então eu posso criar uma família de fonte personalizada e usar meios de passar o arquivo da fonte junto com a página html.</p>
+    <p>Funciona da seguinte forma. Usamos a propriedade no css chamada:</p>
+    <h2>@font-face { font-family: "renomeamos a font como quisermos" ; src: (url de onde está a fonte) } </h2>
+
+    <p>Arquivos de fonts costumam ter formatos diferentes, EOT, WOFF, TTF, SVG, etc. Pra isso, podemos passar mais de uma fonte como parâmetro. Só que para que o navegador precise baixar todas as fontes, para então descobrir qual dos formatos ele reconhece, podemos passar as urls das fontes e junto <b>" format('formato da fonte') "</b></p>
+
+    <h2>Fica assim: src url(endereço do arquivo da fonte no pc) format('woff'), <br /> url(enderço...) format('truetype'), <br /> url(endereço...) format('svg') etc ; </h2>
+
+    <p>Dessa forma o navegador já vai direto no formato, se ele reconhecer, já baixa o arquivo de fonte correto e mostra na tela bonitinho.</p>
+
+    <img src="font-face.png" alt="propriedades da função css @font-face" />
+  </body>
+</html>

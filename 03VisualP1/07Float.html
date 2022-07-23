@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que se deve ser renderizada -->
+
+<html lang="pt-br">
+  <head>
+    <title>Float</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Everson" />
+    <meta name="description" content="importante adicionar uma descrição da sua página, ela é aquele textinho que aparece abaixo dos links quando pesquisamos algo no google" />
+    <meta name="keywords" content="html5, tecnologia, web, etc." />
+
+    <style>
+      #container {
+        width: 80%;
+        padding: 15px;
+        background: #ccc;
+        margin-left: 10%;
+      }
+
+      #container div {
+        width: 150px;
+        height: 50px;
+        border: 2px solid red;
+        margin: 5px;
+      }
+
+      #div2 {
+        float: right;
+        background: #45e045;
+      }
+
+      #div3 {
+        background: yellow;
+        clear: right;
+      }
+
+
+
+      #container2 {
+        width: 80%;
+        padding: 15px;
+        background: #ccc;
+        margin-left: 10%;
+        overflow: auto;
+      }
+
+      #container2 div {
+        width: 150px;
+        height: 50px;
+        border: 2px solid red;
+        margin: 5px;
+      }
+
+      #div4 {
+        float: left;
+      }
+
+      #div5 {
+        float: left;
+        background: #45e045;
+      }
+
+      #div6 {
+        background: yellow;
+        float: left;
+      }
+
+
+      header {
+        background: #ccc;
+        height: 50px;
+      }
+
+      nav {
+        width: 25%;
+        height: 50px;
+        background: orange;
+        float: left;
+      }
+
+      main {
+        width: 70%;
+        height: 100px;
+        background: yellow;
+        float: right;
+      }
+
+      footer {
+        height: 50px;
+        background: blue;
+        clear: both;
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+    <h1>{ Float: right | left | none ;}</h1>
+      <p>
+        Num documento html, a ordem que se escreve os elementos, é a ordem em que eles aparecerão na tela. Um embaixo do outro.
+      </p>
+      <p>Se temos 3 divs: <br />
+        div1 <br />
+        div2 <br />
+        div3 <br />
+      Uma acima da outra. Se usarmos float: left na div 2, é como se ela estivesse flutuando na página, e a div3 vai querer subir e tentar preencher aos redores dela. É assim que funcionam aqueles textos com imagem do lado, em que por conta da figura, a coluna de texto é menor, mas à medida que vai descendo e chegando ao fim da figura, o parágrafo volta a pegar a largura da página inteira.
+      </p>
+      <h2><strong>Usar float pode causar um efeito colateral de formatação.</strong></h2>
+      <p>Uma vez que o elemento div está "flutuando", as dimensões dessa div não é levada em consideração para dimensionar o tamanho do elemento pai. Tem que usar com atenção.</p>
+
+    <h1>{ Clear: right | left | both | none ;}</h1>
+    <p>Voltando ao caso das 3 divs, quando a div2 ganha a propriedade float: left. A tendência da div3 é subir para pegar o lugar dela, mas com a propriedade <b>Clear</b>, Ela permanece no lugar dela. </p>
+    <p><b>Lembrando que a propriedade clear tem que receber a mesma direção que o outro elemento float recebeu. Ex: se a div2 ganhou float: left, a div3 tem que ganhar clear: left.</b></p>
+
+    <h3>Outro exemplo</h3>
+    <p>.div1 { float: left ;} <br />
+      .div2 { float: right ;} <br />
+      .div3 { clear: both ;} <br />
+    </p>
+
+    <h2>Outro Outro Exemplo</h2>
+      <div id="container">
+        <div id="div1">div1</div>
+        <div id="div2">div2</div>
+        <div id="div3">div3</div>
+      </div>
+    <p>Sem usar a propriedade Clear, a div2 vai subir e a div3 vai querer englobar ela, termina ficando por trás. A div2 fica por cima da página, por isso que a div3 sobe e fica por baixo. Ao invés de usar Clear: leaft ou right. Dá para usar Clear: both. Que daí ele já limpa dos dois lados, indepentente de qual direção o elemento de cima estiver.</p>
+    <p><b>Reforçando, ao usar float em algum componente, ele já não será levado em consideração para a soma das dimensões do componente pai. É como se ele nem estivesse ali.</b></p>
+    <div id="container2">
+      <div id="div4">div1</div>
+      <div id="div5">div2</div>
+      <div id="div6">div3</div>
+    </div>
+    <br />
+    <br />
+    <p>Nesse caso, as 3 divs estão com float:left</p>
+    <hr>
+
+    <h2>Um meio não ideal de criar layout, mas é um meio.</h2>
+
+    <header>header</header>
+    <nav>nav</nav>
+    <main>main</main>
+    <footer>footer</footer>
+
+
+  </body>
+</html>

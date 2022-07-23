@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que se deve ser renderizada -->
+
+<html lang="pt-br">
+  <head>
+    <title>Tipos de entrada de dados (input type)</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Everson" />
+    <meta name="description" content="importante adicionar uma descrição da sua página, ela é aquele textinho que aparece abaixo dos links quando pesquisamos algo no google" />
+    <meta name="keywords" content="html5, tecnologia, web, etc." />
+    <style>
+      /* input {
+        display: block;
+      } */
+    </style>
+  </head>
+
+  <body>
+    <h1>Exemplo de formulário</h1>
+
+    <form action="#" method="POST" class="formLogin">
+      <fieldset>
+        <legend>Dados Pessoais</legend>
+
+        <label>Email</label>
+        <input type="email" autofocus required placeholder="Digite um email válido">
+
+        <label>Número de filhos</label>
+        <input type="number" min="0" max="100" required>
+
+        <label>Nascimento</label>
+        <input type="date" min="2021-01-01" max="2021-12-31" required>
+
+        <p>Sexo</p>
+
+        <label>
+          <input type="radio" name="sexo" value="F">
+          Feminino
+        </label>
+
+        <label>
+          <input type="radio" name="sexo" value="M">
+          Masculino
+        </label>
+        <br />
+        <input type="hidden" name="expira" value="2021-12-31">
+
+        <label>Estado</label>
+        <select name="estado">
+          <option value="">Selecione</option>
+          <option value="AL">Alagoas</option>
+          <option value="PE">Pernambuco</option>
+          <option value="SE">Sergipe</option>
+        </select>
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Área de Interesse</legend>
+        <label>
+          <input type="checkbox" name="html" value="html">HTML
+        </label>
+
+        <label>
+          <input type="checkbox" name="css" value="css">CSS
+        </label>
+
+        <label>
+          <input type="checkbox" name="javascript" value="javascript">Javascript
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Mensagem</legend>
+        <textarea name="msg" cols="40" rows="8" style="resize: none" maxlength="200"></textarea>
+
+        <textarea name="contrato" cols="40" rows="8" style="resize: none;" readonly >Aqui entra o texto do contrato que precisa ser aceito</textarea>
+
+        <label><input type="checkbox" checked>Li e aceito os termos</label>
+
+        <input type="range" min="0" max="10" step="1" >
+        <input type="time" >
+        <input type="color" >
+        <br />
+        <br />
+        
+        <label>Sistemas Operacionais</label> *Pode escolher mais de 1, aperta Ctrl + clique<br />
+        <select name="SO" size="5" multiple>
+          <option value="win7">Windows 7</option>
+          <option value="win8">Windows 8</option>
+          <option value="win10">Windows 10</option>
+          <option value="ubuntu">Linux Ubuntu</option>
+          <option value="mac">macOS</option>
+        </select>
+
+      </fieldset>
+
+      <input type="submit" value="Enviar" >
+      <input type="button" value="Botão" >
+      <input type="reset" value="Reset" >
+
+
+    </form>
+  </body>
+</html>

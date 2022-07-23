@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que se deve ser renderizada -->
+
+<html lang="pt-br">
+  <head>
+    <title>Position Property</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Everson" />
+    <meta name="description" content="importante adicionar uma descrição da sua página, ela é aquele textinho que aparece abaixo dos links quando pesquisamos algo no google" />
+    <meta name="keywords" content="html5, tecnologia, web, etc." />
+
+    <style>
+      body {
+        font-size: 1rem;
+        line-height: 24px;
+      }
+
+      a {
+        color: black;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      .div_static {
+        position: static ; 
+        border: 3px solid #73AD21 ;
+        padding: 1px;
+      }
+
+      .div_relative {
+        position: relative;
+        left: 200px;
+        top: 2px;
+        border: 3px solid #73AD21;
+      }
+
+      .div_fixed { 
+        background: rgba(52, 246, 230, 0.3);
+        position: fixed ; 
+        bottom: 0 ; 
+        right: 0 ; 
+        width: 300px ; 
+        border: 3px solid #73AD21 ;
+      }
+
+
+
+      .div-relative {
+        position: relative;
+        width: 400px;
+        height: 200px;
+        border: 3px solid #73AD21;
+      } 
+
+      .div-absolute {
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 210px;
+        height: 100px;
+        border: 3px solid #73AD21;
+      }
+
+      div.sticky {
+        position: sticky;
+        top: 0;
+        padding: 5px;
+        margin-left: 60%;
+        background-color: #cae8ca;
+        border: 2px solid #4CAF50;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1><a href="https://www.w3schools.com/css/css_positioning.asp" target="_blank">Propriedade Position</a></h1>
+      <p>A propriedade position especifica o tipo de método de posicionamento usado para um elemento ( static, relative, fixed, absolute ou sticky )</p>
+
+    <dl>
+      <dt><h2>Static</h2></dt>
+        <dd>Os elementos HTML são posicionados desse jeito por padrão. Esse é o comum. Ele não é posicionado de nenhuma maneira especial, ele é posicionado de acordo com o fluxo padrão da página.<br />
+        <b class="div_static">div .static { position: static ; border: 3px solid #73AD21 ;}</b>
+        </dd> <br />
+      
+<div class="sticky">Esse aqui é o tal do position: sticky. NÃO TEM NADA A VER COM O POSITION: STATIC</div>
+
+      <dt><h2>Relative</h2></dt>
+        <dd>Um elemento com position: relative é posicionado em relação à sua posição normal. Sem contar que ele continua ocupando o mesmo espaço na página, como se nem tivesse saído do lugar. Fica algo no estilo de layers, onde a página está ao fundo e o elemento posicionado <i>relative</i> fica por cima.</dd>
+        <dd>Definir as propriedades <b>top, right, bottom, left</b> de um elemento relativamente posicionado fará com que ele seja ajustado para longe de sua posição normal. Os outros conteúdos não serão alterados por isso, pois o resto da página continua como se ele nunca tivesse saído de sua posição. <br />
+        <b class="div_relative">div .relative { position: relative ; left: 30px ; border: 3px solid #73AD21 ;}</b> <br />
+        Apesar de estar bem à direita, o elemento está bem aqui acima e sem toda essa indentação. Com essa propriedade, dá para colocar essa div em qualquer canto da tela.
+        </dd>
+        <br />
+
+      <dt><h2>Fixed</h2></dt>
+        <dd>Um elemento com position: fixed, está posicioniado em relação à janela de visualização, mesmo se a página for rolada. (Tipo aqueles botões que ficam fixados no cantinho da tela e serve pra voltar ao todo, apesar de ir descendo na página, ele continua no mesma posição da tela.). As propriedades <b>top, right, bottom, left</b> são usadas para posicionar o elemento. <br />
+        <b class="div_fixed">div .fixed { position: fixed ; bottom: 0 ; right: 0 ; width: 300px ; border: 3px solid #73AD21 ;}    OLHA EU AQUI, FIXED
+        </b> <br />
+        O componente está no canto inferior direito. <b>Um elemento fixo não deixa uma lacuna na página onde normalmente estaria localizado.</b> Como é o caso do relative. 
+        </dd>
+        <br />
+
+      <dt><h2>Absolute</h2></dt>
+        <dd>
+          Um elemento com position: absolute está posicionado em relação ao seu "pai" mais próximo, ao invés da posicioná-lo em relação à janela de visualização (tipo o fixed). De qualquer forma, se um elemento posicionado em absoluto não tiver um "pai" posicionado, ele usará o corpo do documento e se moverá junto com a rolagem da página. <br />
+          <b>Elementos posicionados em absoluto são removidos do fluxo normal e podem sobrepor elementos da página.</b> <br />
+          <b>Exemplo: </b> <br />
+            <div class="div-relative">
+              <b>div.relative { position: relative; width: 400px; height: 200px; border: 3px solid #73AD21 ;}</b>
+              <div class="div-absolute">
+                <b>div.absolute { position: absolute; top: 80px; right: 0; width: 210px; height: 100px; border: 3px solid #73AD21 ;}</b>
+              </div>
+            </div>
+        </dd>
+        <br />
+
+      <dt><h2>Sticky</h2></dt>
+        <dd>
+          
+          Um elemento com position: sticky está posiciodado com base na rolagem do usuário (tipo aqueles header com menus de páginas que seguem no topo até o fim da página). Um elemento sticky alterna entre relative e fixed, dependendo da posição de rolagem. Ele é posicionado em relative até que uma determinada posição de deslocamento seja encontrada na janela de exibição. Então ele se fixa no lugar (tipo o position: fixed). <br />
+          <b>Nesse exemplo foi passado como parâmetro TOP: 0; mas também pode ser passado outros parâmetros <br />
+          DEVE-SE especificar pelo menos uma dimensão TOP, RIGHT, BOTTOM, LEFT, em relação a viewport para que o sticky possa ficar localizado na tela.</b>
+        </dd> 
+        <br />
+
+      <dt><h2>Z-Index: Overlapping Elements (Elementos Sobrepostos)</h2></dt>
+        <dd>
+          Quando elementos estão posicionados, eles podem sobrepôr outros elementos. A propriedade z-index especifica a ordem da pilha de um elemento (qual elemento deve ser colocado na frente ou atrás dos outros). <br />
+          <b>Um elemento pode receber um valor de ordem positivo ou negativo, -1 significa que o elemento vai ficar atrás, 1 significa que o elemento vai ficar na frente.</b> <br />
+          SE DOIS ELEMENTOS POSICIONADOS SE SOBREPÕEMSEM UM Z-INDEX ESPECIFICADO, O ELEMENTO POSICIONADO POR ÚLTIMO NO CÓDIGO HTML SERÁ MOSTRADO NA PARTE SUPERIOR!!!
+
+        </dd>
+
+    </dl>
+  </body>
+</html>

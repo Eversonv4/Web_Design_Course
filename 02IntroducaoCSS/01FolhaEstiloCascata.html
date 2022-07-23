@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que se deve ser renderizada -->
+
+<html lang="pt-br">
+  <head>
+    <title>As Folhas de Estilo Cascata</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Everson" />
+    <meta name="description" content="importante adicionar uma descrição da sua página" />
+    <meta name="keywords" content="html5, tecnologia, web, etc." />
+    <style>
+      p {
+        background-image: linear-gradient(to left, red, yellow);
+      }
+
+      ul .text-shadow {
+        font-weight: bold;
+        text-shadow: 1px 2px 5px #333;
+        padding: 2px;
+      }
+
+      .divider-1 {
+        height: 2px;
+        background: linear-gradient(to right, #33f033, #ffffff);
+        margin-bottom: 5px;
+      }
+    </style>
+
+  </head>
+
+  <body>
+
+    Sintaxe: <br/>
+    seletor { propriedade: valor ; } // seletor é "quem" estou querendo mudar, um "identificador".
+    <br/>
+    Alterando a cor de um título H1, exemplo: <br/>
+    h1 { color: red; font-size: 16px; } <br/>
+    <h1>Como incluir um arquivo CSS na página HTML?</h1>
+    <br/>
+    <ul>
+      <li>Ontem tem parênteses, é < ></li> <br />
+      <li>Inline: (p style="...")...(/p) - desse modo não é recomendável, pois em caso de manutenção, seria necessário alterar parágrafo por parágrafo. existe um meio mais eficiente.</li><br />
+      <li>Interno: (style)...(/style) - pode passar os dados pela tag style, que fica no head. também não é muito recomendável, pois fica inviável quando trabalhando com muitas páginas</li><br />
+      <li>Externo: (link href="meusEstilos.css" rel="stylesheet") - É o meio mais usado, vinculando um arquivo CSS externo, podendo alterar dados em apenas uma página e ele modifica todas as outras</li>
+    </ul>
+    <hr>
+
+    <h2>Seletores de elementos</h2> 
+    <h4>novamente, no lugar de parênteses, são < ></h4>
+    <ul>
+      <li><b>HTML: </b>(p) ... (/p)</li>
+      <li><b>CSS: </b>p { ... ;}</li>
+    </ul>
+
+    <hr>
+    <h2>Seletores de classes</h2> 
+    <h4>Além das tags, podemos identificar componentes por meio de CLASSES. novamente, no lugar de parênteses, são < ></h4>
+    <ul>
+      <li><b>HTML: </b>(p class="minha-classe") ... (/p)</li>
+      <li><b>CSS: </b>.minha-classe { ... ;}</li>
+    </ul>
+
+    <hr>
+    <h2>Seletores de ID</h2>
+    <h4> - Usar somente um id por componente, não repetí-los, identificadores são únicos.</h4>
+    <h4> - Além das tags e classes, podemos identificar componentes por meio de ID. novamente, no lugar de parênteses, são < ></h4>
+    <ul>
+      <li><b>HTML: </b>(p id="meu-id") ... (/p)</li>
+      <li><b>CSS: </b>#meu-id { ... ;}</li>
+    </ul>
+    <hr>
+
+    <h2>fonts</h2>
+      <ul>
+        <li><b>font-family: </b>Arial, Times, etc.</li>
+        <li><b>font-size: </b>Tamanho</li>
+        <li><b>font-style: </b>Pôr para itálico ou não: italic, normal, oblique</li>
+        <li><b>font-variant: </b>normal, small-caps(minusculo), initial (configura para a propriedade padrão da fonte), inherit(herda propriedade de seus "parêntes")</li>
+      </ul>
+      <br />
+      <hr>
+
+      <h2>text</h2>
+      <ul>
+        <li><b>text-align: </b>Alinhar right, left ou center, justify</li>
+
+        <li><b>text-decoration: </b>Se quer sublinhar ou não. "overline" "line-through" "underline" "none" (pra tirar sublinhado).</li>
+
+        <li><b>text-indent: </b>Se temos um espaçamento entre o começo do parágrafo e o resto do testo</li>
+
+        <li><b>text-transform: </b>Se desejo escrever tudo maiúsculo ou minúsculo. uppercase / lowercase / capitalize.</li>
+
+        <li><b>text-shadow: </b>Para dar um efeito de sombra na fonte, ele recebe 4 parâmetros para formar a sombra: Horizontal Vertical Blur(tipo esfumaçado, também é em pixel) e a cor da sombra.</li>
+        <p class="text-shadow">Exemplo: text-shadow: 3px 3px 5px red</p>
+        
+        <div class="divider-1"></div>
+        
+        <li><b>font-weight: </b>bold / normal / lighter / algum Nº inteiro "900" por exemplo.</li>
+      </ul>
+      <br />
+      <hr>
+
+      <h2>RGB</h2>
+      <ul>
+        <li>#FFFFFF: Branco</li>
+        <li>#FF0000: Vermelho</li>
+        <li>#00FF00: Verde</li>
+        <li>#0000FF: Azul</li>
+        <li>#FFFF00: Amarelo</li>
+        <li>#FF00FF: Rosa</li>
+        <li>#00FFFF: Azul clarinho bonitinho</li>
+      </ul>
+      <hr>
+
+      <h2>Atributos de cor: color(fonte) & background-color(fundo)</h2>
+  </body>
+  <script>
+    
+  </script>
+</html>

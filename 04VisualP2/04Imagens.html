@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que se deve ser renderizada -->
+
+<html lang="pt-br">
+  <head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Everson" />
+    <meta name="description" content="importante adicionar uma descrição da sua página, ela é aquele textinho que aparece abaixo dos links quando pesquisamos algo no google" />
+    <meta name="keywords" content="html5, tecnologia, web, etc." />
+    <style>
+      body {
+        font-family: arial, sans-serif;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Imagens</h1>
+    <p>Ao criar um site do zero, é importante separar uma pasta exclusivamente para as imagens usadas no site. Além de renomeá-las adequadamente, para facilitar sua <i>linkagem</i>. Em grandes sites, é comum separar as imagens em subpastas, pelo bem da organização. Imagens do tipo logos, botões, coisas desse tipo é bom colocar em uma pasta nomeada "interface". Imagens de produtos, poderia ficar em uma pasta chamada "products", imagens relacionadas à notícias, poderia ficar na pasta "news". Enfim, são alguns exemplos. </p>
+
+    <h2>Tag "img" e os atributos <i>src, alt, title:</i></h2>
+    <p>Para adicionar uma imagem, usa-se a tag <b><'img></b> e dentro dela, usamos os atributos <b>src=""</b>, e dentro das aspas colocamos a URL da imagem, que pode ser uma URL de alguma imagem na internet ou o caminho de alguma imagem dentro do seu pc. Temos o atributo <b>alt=""</b> que serve para colocar uma descrição na imagem, caso a mesma não carregue na página (é semântico) Vale lembrar que se a imagem não tem nenhum significado para a página, é só pra fim de estética, o atributo alt deve ser passado como uma string vazia, sem descrição. Temos também <b>title=""</b> que serve para fornecer alguma informação adicional à respeito da imagem. A maioria dos navegadores vão mostrar esse atributo como uma dica quando o mouse estiver em cima da imagem </p>
+    <img src="https://kanto.legiaodosherois.com.br/w760-h398-gnw-cfill-q80/wp-content/uploads/2020/05/legiao_q0_FkgcyAhME.png.jpeg" alt="cavaleiros do zodíaco" title="Shiryu é o melhor" width="400" height="250" />
+
+    <p>Temos outros atributos que podemos usar dentro da tag <'img>, que são os atributos de dimensões <b>width="número"</b> e <b>height="número"</b> Esses atributos servem para especificar a largura e altura da imagem mostrada na tela, respectivamente. Lembrando que essas dimensões podem ser feitas tanto no arquivo CSS, quanto dentro da própria tag imagem.</p>
+
+    <h2>Lugares onde pôr imagem no código (isso é "demodê", hoje usamos CSS)</h2>
+    <p>Mas antes era assim que as pessoas alinhavam suas imagens, dentro do próprio HTML. É possível encontrar sites ainda estruturado dessa maneira.</p>
+      <h3>* Antes de um parágrafo</h3>
+      <img src="https://flink.apache.org/img/logo/png/500/flink_squirrel_500.png" alt="esquilo estilizado pintado de vermelho e roxo" width="100" height="100" title="Esquilinho lindo" />
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur accusantium voluptatum accusamus nihil odit mollitia, rerum voluptate deserunt labore veritatis facere repellendus saepe itaque soluta eius natus, culpa quae! Voluptas.</p>
+
+      <h3>* Dentro de um parágrafo</h3>
+      <p><img src="https://flink.apache.org/img/logo/png/500/flink_squirrel_500.png" alt="esquilo estilizado pintado de vermelho e roxo" width="100" height="100" title="Esquilinho lindo" /> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde, sapiente culpa harum et asperiores illum reprehenderit odio veritatis accusantium, laudantium ut quam tempore, eligendi id dolore quos. Aliquam, eos quos!</p>
+
+      <h3>* No meio de um parágrafo</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, tempora. Id, hic tempore.  Commodi exercitationem, laborum reiciendis libero cum magni <img src="https://flink.apache.org/img/logo/png/500/flink_squirrel_500.png" alt="esquilo estilizado pintado de vermelho e roxo" width="100" height="100" title="Esquilinho lindo" /> distinctio non accusantium debitis illo natus ut, sequi minima quam.</p>
+
+    <h2>Alinhando imagens Horizontalmente</h2>
+    <p>Temos o atributo <b>align</b> que recebe como parâmetro os valores <b>left</b> e <b>right</b>. Esse atributo é normalmente usado para indicar como outras partes da página flui em volta de uma imagem. Por exemplo, se alinhado à esquerda, a imagem ficará à esquerda e o texto à direita. O texto continua fluindo normalmente em volta da imagem.</p>
+    <h3>* Alinhado à esquerda</h3>
+    <p><img src="https://flink.apache.org/img/logo/png/500/flink_squirrel_500.png" alt="esquilo estilizado pintado de vermelho e roxo" width="100" height="100" title="Esquilinho lindo" align="left" />
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime possimus corporis dicta soluta odio est necessitatibus, praesentium alias? Libero, maxime officiis corporis vel error consequatur nam eveniet? Veritatis, cum saepe? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque omnis voluptas saepe fugit consectetur quae consequuntur fuga assumenda repellat dolore labore velit pariatur suscipit libero eos quaerat, ipsum, placeat odit?</p>
+    <br />
+    <br />
+
+    <h3>* Alinhado à direita</h3>
+    <p><img src="https://flink.apache.org/img/logo/png/500/flink_squirrel_500.png" alt="esquilo estilizado pintado de vermelho e roxo" width="100" height="100" title="Esquilinho lindo" align="right" />
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime possimus corporis dicta soluta odio est necessitatibus, praesentium alias? Libero, maxime officiis corporis vel error consequatur nam eveniet? Veritatis, cum saepe? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque omnis voluptas saepe fugit consectetur quae consequuntur fuga assumenda repellat dolore labore velit pariatur suscipit libero eos quaerat, ipsum, placeat odit?</p>
+
+    <h2>Alinhando imagens Verticalmente</h2>
+    <p>Fazendo uso do mesmo atributo <b>align</b> podemos alinhar imagens na sua vertical. Começando pelo valor <b>Top</b>, que alinha a primeira linha do parágrafo com o topo da imagem. (meio inútil, não sei porque alguém faria isso, mas deve ter um momento em que isso seja útil). Temos também o <b>middle</b>, que alinha a primeira linha do parágrafo com o meio da imagem. E por último, <b>bottom</b>, ele alinha a primeira linha do parágrafo com a parte de baixo da imagem.
+
+    <p><img src="https://flink.apache.org/img/logo/png/500/flink_squirrel_500.png" alt="esquilo estilizado pintado de vermelho e roxo" width="100" height="100" title="Esquilinho lindo" align="top" />
+    <b>Top</b> ipsum dolor, sit amet consectetur adipisicing elit. Maxime possimus corporis dicta soluta odio est necessitatibus, praesentium alias? Libero, maxime officiis corporis vel error consequatur nam eveniet? Veritatis, cum saepe? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque omnis voluptas saepe fugit consectetur quae consequuntur fuga assumenda repellat dolore labore velit pariatur suscipit libero eos quaerat, ipsum, placeat odit?</p>
+
+    <p><img src="https://flink.apache.org/img/logo/png/500/flink_squirrel_500.png" alt="esquilo estilizado pintado de vermelho e roxo" width="100" height="100" title="Esquilinho lindo" align="middle" />
+    <b>Middle</b> ipsum dolor, sit amet consectetur adipisicing elit. Maxime possimus corporis dicta soluta odio est necessitatibus, praesentium alias? Libero, maxime officiis corporis vel error consequatur nam eveniet? Veritatis, cum saepe? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque omnis voluptas saepe fugit consectetur quae consequuntur fuga assumenda repellat dolore labore velit pariatur suscipit libero eos quaerat, ipsum, placeat odit?</p>
+
+    <p><img src="https://flink.apache.org/img/logo/png/500/flink_squirrel_500.png" alt="esquilo estilizado pintado de vermelho e roxo" width="100" height="100" title="Esquilinho lindo" align="bottom" />
+    <b>Bottom</b> ipsum dolor, sit amet consectetur adipisicing elit. Maxime possimus corporis dicta soluta odio est necessitatibus, praesentium alias? Libero, maxime officiis corporis vel error consequatur nam eveniet? Veritatis, cum saepe? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque omnis voluptas saepe fugit consectetur quae consequuntur fuga assumenda repellat dolore labore velit pariatur suscipit libero eos quaerat, ipsum, placeat odit?</p>
+
+    <h2>3 regras para criar imagens</h2>
+    <p><b>1 - </b> Salvar a imagem no formato certo. Prestar atenção no formato da imagem que irá salvar.</p>
+    <p><b>2 - </b> Salvar imagens no seu tamanho correto. Salvar a imagem com o mesmo tamanho que será mostrada no site, para evitar que fique distorcida ou esticada.</p>
+    <p><b>3 - </b> Usar a resolução correta de imagem. Ficar atento à isso. A maioria dos computadores apresentam sites em apenas 72 pixels por polegada. Salvar imagens maiores que o necessário irá atrazar o carregamento da imagem na página.</p>
+
+    <h2>Formatos de Imagens</h2>
+      <h3>JPEG</h3>
+      <p>Sempre que tiver muitas cores em uma imagem, tipo uma fotografia, deve-se usar JPEG. </p>
+
+      <h3>GIF ou PNG</h3>
+      <p>Quando salvar uma que possui poucas cores ou grandes áreas com a mesma cor, tipo logos, ilustrações que possuem a mesma cor preenchendo quase tudo, com cores chapadas, vale a pena salvar a imagem como gif (ou PNG).</p>
+
+    <h2>Dimensões de Imagens</h2>
+      <p>A imagem que se deseja usar no website, deve ser salva com as mesmas dimensões que será apresentada no site. Dá para dimensioná-las com o paint, photoshop ou outro editor de imagens. Reduzindo o tamanho das imagens melhora no carregamento/download da imagens no site.</p>
+      <p>Não dá para aumentar o tamanho de uma imagem significativamente sem afetar a qualidade da imagem. Se sua imagem tem uma resolução de 100x50 e tu aumenta em 300%, vai ficar uma bosta. A imagem vai ficar borrada ou pixelada, com aqueles bloquinhos horríveis.</p>
+      <p>Apenas alguns tipos de imagens podem ser cortadas sem perder informações valiosas. Detalhe: imagens carregam muito mais informações que a posição de cada pixel que no fim formam uma imagem. Pesquisar mais sobre!</p>
+
+    <h2>Cortando Imagens</h2>
+      <p>Quando pesquisar ou cortar imagens, procure por imagens em seu formato e resolução adequado, ficar atento se a imagem está em formato retrato ou paisagem.</p>
+
+    <h2>Resolução de Imagem</h2>
+      <p>Imagens criadas para web devem ser salvas com uma resolução de 72ppi (pixels per inch). Quanto maior a resolução da imagem, maior o tamanho do arquivo.</p>
+      <p>JPGs, GIFs e PNGs percetem ao tipo de imagem conhecido por <b>bitmap</b>(pesquisar mais sobre!). Elas são feitas de vários quadrados em miniaturas (pixels). A resolução de uma imagem é medida pelo número de pixels contidos dentro de uma polegada quadrada.</p>
+      <p>Imagens impressas, tipo revistas ou livros, são feitos de pequenos circulos "dots". Essas imagens normalmente são impressas com a resolução de 300 dots per inch (dpi). Devido ao fato dos monitores de computador serem limitados a 72ppi, usando imagens na web com resolução maior que isso não vai melhorar a qualidade de imagem. </p>
+
+    <h2>Imagens Vetoriais</h2>
+      <p>Imagens vetoriais se diferenciam das bitmaps por meio da sua resolução independente. Elas são normalmente criadas em programas tipo o Adobe Illustrator. Quando a imagem tem umas linhas desenhadas, tipo um logo, ilustração ou diagrama, são melhores quando estão em formato vetorial.</p>
+      <p>As imagens vetoriais são criadas colocando pontos em uma grade e desenhando linhas entre esses pontos. Uma cor pode então ser adicionada para "preencher" as linhas que foram criadas. </p>
+      <p>As vantagens de criar desenhos de linhas em formato vetorial e que dá para aumentar ou diminuir as dimensões das imagens sem perder a qualidade. O método recente de usar imagens vetoriais para monitores em websites envolve em salvar uma versão bitmap da imagem vetorial original e usando ela.</p>
+      <p>Scalable Vector Graphics(SVG) são um novo formado usando para mostrar imagens vetoriais diretamente da web, eliminando a necessiadade de criar uma versão da imagem em bitmap.</p>
+
+    <h2>Animated GIFs</h2>
+      <p>GIFs animados mostram vários quadros de uma imagem em sequência, embora possa ser usada para criar simples animações. GIF é basicamente um slide que passa bem rápido várias imagens e que dão a impressão de movimento (é basicamente um vídeo, mas sem o áudio). Alguns programas, tipo Photoshop permite a criação de GIFs, além de alguns websites. </p>
+      <p>Vale lembrar que cada frame adicionado vai aumentar o tamanho da sua imagem GIF e o tempo de carregamento da imagem. Nem todo mundo gosta de ficar esperando o carregamento, portanto, use GIFs com moderação. Esse formato é mais recomendado para coisinhas simples, tipo aqueles carregamentos de vídeos, aquela bolinha que ficava girando no antigo youtube, por exemplo. </p>
+    
+    <h2>Tranparência</h2>
+      <p>Criar uma imagem que é parcialmente transparente (aquelas imagens sem fundo) para a web envolve em selecionar dois formatos: <b>Transparent GIF</b> ou <b>PNG</b></p>
+      <p>Se a a parte transparente da imagem tem bordas retas que são 100% transparentes, dá para salvar a imagem como um GIF com a opção de transparência selecionada.</p>
+      <p>Se a parte transparente da imagem tem bordas diagonais ou redondas or se deseja-se uma transparência meio opaca ou uma sombra no fundo, então é importante salvar como PNG.</p>
+      <p>Imagens PNGs transparentes não são suportadas em navegadores mais antigos, mas dá para burlar isso com javascript.</p>
+      <img src="imagem.png" alt="tipos de fundos de imagens" title="tipos de imagens"  />
+    
+    <h2>Examinando Imagens na Web</h2>
+      <p>Ao atualizar um site, é importante verificar se o tamanho da imagem do site antes de criar uma nova e substituí-la. Isso pode ser feito clicando com o botão direito do mouse na imagem e abrí-la em uma nova janela.</p>
+
+    <h2>HTML5: Figure e Figure Caption</h2>
+      <p>Imagens normalmente vêm com legendas e isso foi introduzido no HTML 5 com a tag <b><'figure></b> que serve para colocar uma legenda com uma descrição da imagem. Dá para adicionar mais de uma imagem dentro da mesma tag <'figure> desde que elas compartilhem da mesma legenda. </p>
+      <p>A tag <b><'figcaption></b> foi adicionada ao HTML 5 em desejo de permitir que o autores do website a adicionarem uma legenda em uma imagem. </p>
+    <h3>A tag "figcaption" fica dentro da tag "figure", lembrando!!! </h3>
+      <figure>
+        <img src="https://i.pinimg.com/474x/19/de/a1/19dea1fc7d1061166c182ee0cb5c5b03--drifting-apart-sleeping-otters.jpg" alt="Foto de duas lontras boiando na água" width="390" height="280" />
+        <br />
+        <figcaption>
+          <i>Lontras boiando na água de mãos dadas para que elas não se afastem.</i>
+        </figcaption>
+      </figure>
+
+
+
+
+
+
+
+  </body>
+</html>

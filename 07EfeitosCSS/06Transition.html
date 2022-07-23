@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que se deve ser renderizada -->
+
+<html lang="pt-br">
+  <head>
+    <title>Transition</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Everson" />
+    <meta name="description" content="importante adicionar uma descrição da sua página, ela é aquele textinho que aparece abaixo dos links quando pesquisamos algo no google" />
+    <meta name="keywords" content="html5, tecnologia, web, etc." />
+    <style>
+      body {
+        font-family: Tahoma;
+      }
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: orange;
+        border-radius: 15px 15px 15px 15px;
+        transition-property: width, height, background-color, border-radius;
+        transition-duration: .5s, 1.3s, 2s;
+        transition-timing-function: cubic-bezier(.3,-0.41,.62,1.52);
+        transition-delay: 0.2s, 1.3s, .7s;
+      }
+      div:hover {
+        width: 250px;
+        height: 250px;
+        background-color: #00ff00;
+        border-radius: 125px 125px 125px 125px;
+      }
+      a {
+        text-decoration: none;
+        color: blue;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Transition (Transições)</h1>
+    
+    <div>1</div>
+    <h2><a href="https://cubic-bezier.com" target="_blank">cubic-bezier.com</a></h2>
+  </body>
+</html>

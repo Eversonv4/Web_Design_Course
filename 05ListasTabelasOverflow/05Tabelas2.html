@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que se deve ser renderizada -->
+
+<html lang="pt-br">
+  <head>
+    <title>Tabelas Outros atributos</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Everson" />
+    <meta name="description" content="importante adicionar uma descrição da sua página, ela é aquele textinho que aparece abaixo dos links quando pesquisamos algo no google" />
+    <meta name="keywords" content="html5, tecnologia, web, etc." />
+    <style>
+      table, tr, td {
+        border: 1px solid black;
+        font-size: 28px;
+        width: 200px;
+      }
+
+      div {
+        position: relative;
+        overflow: auto;
+      }
+
+      .colspan, .rowspan {
+        float: left;
+      }
+
+      .rowspan {
+        margin-bottom: 20px;
+        position: absolute;
+        top: 50px;
+        left: 220px;
+      }
+
+      .linha {
+        position: absolute;
+        top: 0;
+        left: 220px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>colspan & rowspan (mesclando COLUNAS & LINHAS)</h1>
+    <p>Esse atributo serve para abribuir o espaço de mais de uma coluna para uma mesma célula. No exemplo abaixo, a célula 1A está tomando o espaço de duas colunas. É uma maneira de mesclar colunas ou linhas.</p>
+    <div>
+    <p>COLUNA</p>
+    <table class="colspan">
+      <tr>
+        <td colspan="2">1A</td>
+      </tr>
+      <tr>
+        <td>2A</td> <td>2B</td>
+      </tr>
+      <tr>
+        <td>3A</td> <td>3B</td>
+      </tr>
+    </table>
+    <P class="linha">LINHA</P>
+    <table class="rowspan">
+      <tr>
+        <td rowspan="2">1A</td>
+        <td>1B</td>
+      </tr>
+      <tr>
+        <td>2B</td>
+      </tr>
+      <tr>
+        <td>3A</td> <td>3B</td>
+      </tr>
+    </table>
+  </div>
+
+  <p>Demonstração: <'td rowspan="2">1A<'/td></p>
+  <p>Demonstração: <'td colspan="2">1A<'/td</p>
+  </body>
+</html>

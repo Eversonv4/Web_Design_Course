@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que se deve ser renderizada -->
+
+<html lang="pt-br">
+  <head>
+    <title>Primeiras Regras de CSS</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Everson" />
+    <meta name="description" content="importante adicionar uma descrição da sua página" />
+    <meta name="keywords" content="html5, tecnologia, web, etc." />
+
+    <style>
+      body {
+        background-color: #cccccc;
+      }
+
+      h1 {
+        font-family: Arial, Consolas, sans-serif;
+        font-size: 40px;
+        font-style: normal;
+        font-variant: small-caps;
+        color: #0004ff;
+      }
+
+      h2 {
+        text-transform: uppercase;
+        font-family: Arial;
+        color: #12de5a;
+        background-color: #FFFF00;
+      }
+      
+      p {
+        font-variant: normal;
+        text-align: left;
+        text-decoration: underline;
+        text-indent: 30px;
+        text-transform: none;
+      }
+
+      #destaque {
+        color: red;
+        background-color: yellow;
+      }
+
+      .destaque {
+        color: blue;
+        background-color: #1ffd17;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <h1>Estrutura básica</h1>
+    <h2>Substítulo da página</h2>
+      <p class="destaque">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque illum ullam cumque soluta animi ab quam unde nobis ipsum architecto molestias tempora, accusamus sint explicabo saepe quas sequi quidem natus!</p>
+
+      <p id="destaque">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem nemo pariatur id harum natus rerum dolorem provident consectetur mollitia, ratione excepturi libero. Facilis labore sint aspernatur id illum odit illo!</p>
+
+      <p class="destaque">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, quisquam voluptate rerum soluta dolore ad voluptas nulla consequatur modi sit! Rerum adipisci mollitia culpa velit illo sapiente illum asperiores ullam?</p>
+  </body>
+</html>

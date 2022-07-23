@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que se deve ser renderizada -->
+
+<html lang="pt-br">
+  <head>
+    <title>Listas aninhadas e de Definição</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Everson" />
+    <meta name="description" content="importante adicionar uma descrição da sua página, ela é aquele textinho que aparece abaixo dos links quando pesquisamos algo no google" />
+    <meta name="keywords" content="html5, tecnologia, web, etc." />
+    <style>
+      body {
+        margin: 50px;
+      }
+
+      h1, h2 {
+        font-size: 36px;
+      }
+
+      li {
+        border: 1px solid blue;
+        padding: 5px;
+      }
+      ul {
+        border: 1px solid red;
+        padding: 5px;
+      }
+
+      dt {
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Listas aninhadas</h1>
+      <ul>
+        <li>faz</li>
+        <li>todo
+          <ul> 
+            <li>sentido</li>
+            <li>do</li>
+          </ul>
+        </li>
+        <li>mundo</li>
+      </ul>
+
+    <h2>Lista de definição</h2>
+      <dl> <!--lista de definição -->
+        <dt>titulo a ser definido</dt>
+        <dd>definição do titulo definição do titulo definição do titulo definição do titulo definição do titulo definição do titulo definição do titulo definição do titulo definição do titulo definição do titulo.</dd>
+      </dl>
+    <p>Podemos ter uma definição para um ou vários títulos, como também várias definições para um mesmo título (tipo um dicionário).</p>
+  </body>
+</html>

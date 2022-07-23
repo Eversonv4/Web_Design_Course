@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que se deve ser renderizada -->
+
+<html lang="pt-br">
+  <head>
+    <title>Formulários</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Everson" />
+    <meta name="description" content="importante adicionar uma descrição da sua página, ela é aquele textinho que aparece abaixo dos links quando pesquisamos algo no google" />
+    <meta name="keywords" content="html5, tecnologia, web, etc." />
+    <style>body {font-family: Tahoma;}</style>
+  </head>
+
+  <body>
+    <p>Se a intenção for adicionar uma caixa simples de pesquisa ou criar uma aplicação um pouco mais segura, o HTML fornece diversos elementos para coletar dados dos usuários. Aquele campo de busca do google é um bom exemplo de campo de preenchimento em um formulário, quando se está registrando em um site, ou fazendo compras online, etc.</p>
+    <h1>Formulários</h1>
+      <h2>Controle de Formulário</h2>
+      <p>Existe várias maneias de controlar a informação que será coletada dos usuários que acessarem o site.</p>
+        <p>
+          <b>type="button" :</b> 
+          <br /> 
+          <input type="button" value="Clica aqui" > <br />
+          <br />
+          <br />
+
+          <b>type="checkbox" :</b>
+          <br />
+          <input type="checkbox"> <br />
+          <br />
+          <br />
+
+          <b>type="color" :</b>
+          <br />
+          <input type="color"> <br />
+          <br />
+          <br />
+
+          <b>type="date" :</b>
+          <br />
+          <input type="date"> <br />
+          <br />
+          <br />
+
+          <b>type="datetime-local" :</b>
+          <br />
+          <input type="datetime-local"> <br />
+          <br />
+          <br />
+
+          <b>type="email" :</b>
+          <br />
+          <input type="email"> <br />
+          <br />
+          <br />
+
+          <b>type="file" :</b>
+          <br />
+          <input type="file"> <br />
+          <br />
+          <br />
+
+          <b>type="hidden" :</b>
+          <br />
+          <input type="hidden"> <br />
+          <br />
+          <br />
+
+          <b>type="image" :</b>
+          <br />
+          <input type="image"> <br />
+          <br />
+          <br />
+
+          <b>type="month" :</b>
+          <br />
+          <input type="month"> <br />
+          <br />
+          <br />
+
+          <b>type="number" :</b>
+          <br />
+          <input type="number"> <br />
+          <br />
+          <br />
+
+          <b>type="password" :</b>
+          <br />
+          <input type="password" value="Everson"> <br />
+          <br />
+          <br />
+
+          <b>type="radio" :</b>
+          <br />
+          <input type="radio"> <br />
+          <br />
+          <br />
+
+          <b>type="range" :</b>
+          <br />
+          <input type="range"> <br />
+          <br />
+          <br />
+
+          <b>type="reset" :</b>
+          <br />
+          <input type="reset"> <br />
+          <br />
+          <br />
+
+          <b>type="search" :</b>
+          <br />
+          <input type="search"> <br />
+          <br />
+          <br />
+
+          <b>type="submit" :</b>
+          <br />
+          <input type="submit"> <br />
+          <br />
+          <br />
+
+          <b>type="tel" :</b>
+          <br />
+          <input type="tel"> <br />
+          <br />
+          <br />
+
+          <b>type="text" :</b>
+          <br />
+          <input type="text"> <br />
+          <br />
+          <br />
+
+          <b>type="time" :</b>
+          <br />
+          <input type="time"> <br />
+          <br />
+          <br />
+
+          <b>type="url" :</b>
+          <br />
+          <input type="url"> <br />
+          <br />
+          <br />
+
+          <b>type="week" :</b>
+          <br />
+          <input type="week"> <br />
+          <br />
+          <br />
+        </p>
+      
+      <p>São alguns tipos de Inputs que podem ser usados para pegar alguns dados dos usuários</p>
+      <p>
+        <b>Adicionando texto:</b> O text input serve para campos de texto de uma linha apenas, tipo emails ou nomes. O password input, é autoexplicativo, funciona com uma caixa de texto que possui uma máscara para ocultar os caracteres. O text area, é um campo de texto multi-linhas, é bastante útil para mensagens ou comentários.
+      </p>
+
+      <p>
+        <b>Fazendo escolhas:</b> <i>Radio buttons</i>, <i>Checkboxes</i>, <i>Drop-down boxes</i>, são alguns dos exemplos que podem ser usados para selecionar algo em um menu restrito de possibilidades.
+      </p>
+
+      <p>
+        <b>Enviando Formulários: </b> Há várias maneiras de enviar um formulário, existe os <b>Submit buttons</b>, dá para fazer também por meio de um <b>Image buttons</b> que assume o papel de um submit button.
+      </p>
+
+      <p>
+        <b>Enviando arquivos: </b> usando <i>file upload</i> é possível que os usuários façam o upload de arquivos.
+      </p>
+
+      <h2>Como formulario funciona</h2>
+        <ol>
+          <li>Um usuário preenche um formulário e então clica no botão "enviar".</li> <br />
+          <li>O nome de cada controle de formulário é enviando ao servidor junto com o valor que o usuário inseriu ou selecionou.</li> <br />
+          <li>O servidor processa a informação usando alguma linguagem de programação, Javascript, PHP, Java, etc. E pode também armazenar a informação em um banco de dados.</li> <br />
+        </ol>
+
+        <p>
+          Um formulário pode ter vários controles de formulários(campos de preenchimentos de dados), cada um coletando informações diferentes. O servidor precisa saber qual parte dos dados inseridos corresponde a qual elemento do formulário.
+        </p>
+        <img src="form_exemp.png" alt="exemplo de formulário" title="formulário top" />
+        <p>
+          Para diferenciar entre vários pedaços de dados inseridos, a informação é enviada do navegador para o servidor usando pares de name/value (nome e seu valor correspondente). Nesse exemplo, foi pedido para que o visitante colocasse seu nome e escolhesse seu músico de jazz favorito. O par name/value enviado ao servidor foi: <br />
+          <b>username=Ivy</b> <br />
+          <b>vote=Herbie</b>
+        </p>
+
+        <p>
+          Se o controle de formulário (campos de preenchimentos de dados) permite que o usuário ponha textos, então o value é qualquer coisa que a pessoa tenha digitado. Da mesma forma, se o formulário permite escolher entre opções fixas (ex: radio buttons, checkboxes ou drop-down lists), então o(a) autor(a) vai adicionar um código(específico) automárico para cada opção disponível.
+        </p>
+        <img src="name_value.png" alt="username=ivy" title="username=ivy / name e value" />
+        <p><em><strong>
+          Não se deve nunca mudar o nome de um campo de preenchimento de dados (form control) em uma página, a menos que se saiba que o código no servidor irá entender esse novo valor.
+        </p></em></strong>
+  </body>
+</html>

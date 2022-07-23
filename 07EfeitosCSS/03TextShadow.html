@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que se deve ser renderizada -->
+
+<html lang="pt-br">
+  <head>
+    <title>Text Shadow</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Everson" />
+    <meta name="description" content="importante adicionar uma descrição da sua página, ela é aquele textinho que aparece abaixo dos links quando pesquisamos algo no google" />
+    <meta name="keywords" content="html5, tecnologia, web, etc." />
+    <style>
+      body {
+        font-family: Tahoma;
+      }
+      h1 {
+        font-size: 50px;
+        text-align: center;
+        text-shadow: -20px -20px 5px red, 20px 20px 5px greenyellow, -20px 20px 5px blue, 20px -20px 5px #ff1cff;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Text Shadow</h1>
+
+    <h2>{ text-shadow: shadow-h | shadow-v | blur-radius | color | Ou none ;}</h2>
+    <p>Funciona bem parecido com o Box Shadow, mas possui menos atributos. Tem shadow-h, shadow-v, blur-radius e color. E assim como o Box Shadow, permite colocar mais de uma sombra, basta separar por vírgula os atributos de cada sombra.</p>
+
+    <h2>shadow-h</h2>
+    <p>Um valor positivo coloca a sombra no lado direito do texto, um valor negativo coloca do lado esquerdo.</p>
+
+    <h2>shadow-v</h2>
+    <p>Um valor positivo coloca a sombra embaixo do texto, um valor negativo coloca acima do texto.</p>
+
+    <h2><i>blur-radius</i></h2>
+    <p>Quanto mais alto o valor do número, mais borrado a sombra ficará.</p>
+
+    <h2>color</h2>
+    <p>Cor da sombra</p>
+
+  </body>
+</html>

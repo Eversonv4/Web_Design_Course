@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que se deve ser renderizada -->
+
+<html lang="pt-br">
+  <head>
+    <title>Praticando Tabelas Semanticamente</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Everson" />
+    <meta name="description" content="importante adicionar uma descrição da sua página, ela é aquele textinho que aparece abaixo dos links quando pesquisamos algo no google" />
+    <meta name="keywords" content="html5, tecnologia, web, etc." />
+    <style>
+      body {
+        font-family: tahoma, sans-serif;
+        background-image: linear-gradient(to bottom right, red, blue);
+        color: white;
+      }
+      
+      caption {
+        font-weight: bold;
+        text-decoration: underline;
+        margin-bottom: 10px;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 80%;
+        margin: auto;
+        
+      }
+
+      th {
+        border: 2px solid black;
+        background-image: linear-gradient(to top left, red, blue);
+      }
+
+      td {
+        border: 2px solid black;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <table>
+
+      <caption>Tabela de preço de cursos</caption>
+
+      <thead>
+        <tr>
+          <th>Área</th>
+          <th>Curso</th>
+          <th>Preço</th>
+        </tr>
+      </thead>
+
+      <tfoot>
+        <tr>
+          <td colspan="3">Valores sujeitos à alterações sem prévio aviso</td>
+        </tr>
+      </tfoot>
+
+      <tbody>
+        <tr>
+          <td rowspan="3">Programação</td>
+          <td>Javascript</td>
+          <td>R$ 500,00</td>
+        </tr>
+        <tr>
+          
+          <td>Python</td>
+          <td>R$ 600,00</td>
+        </tr>
+        <tr>
+          
+          <td>Java</td>
+          <td>R$ 600,00</td>
+        </tr>
+        <tr>
+          <td>Webcraft</td>
+          <td>React</td>
+          <td>R$ 300,00</td>
+        </tr>
+        <tr>
+          <td>Design</td>
+          <td>Photoshop</td>
+          <td>R$ 400,00</td>
+        </tr>
+        <tr>
+          <td rowspan="2">Development</td>
+          <td>HTML</td>
+          <td>R$ 200,00</td>
+        </tr>
+        <tr>
+          
+          <td>CSS</td>
+          <td>R$ 300,00</td>
+        </tr>
+      </tbody>
+
+
+    </table>
+  </body>
+</html>

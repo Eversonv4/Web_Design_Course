@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que se deve ser renderizada -->
+
+<html lang="pt-br">
+  <head>
+    <title>Estruturando Layout com Semântica</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Everson" />
+    <meta name="description" content="importante adicionar uma descrição da sua página" />
+    <meta name="keywords" content="html5, tecnologia, web, etc." />
+
+    <style>
+      body {
+        width: 700px;
+        margin: auto;
+      }
+
+      li {
+        line-height: 1.5;
+      }
+
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Wireframe: São esçobos simples de telas de produtos digitais, como sites e aplicativos.</h2>
+    <h3>**Onde tem parênteses, são < ></h3>
+      <ul>
+        <li> <b>(div id="") (/div)</b>
+
+        <li><b>(header) (/header)  :</b> header é o cabeçado da seção, dá para colocar um menu, um logotipo, formulário de busca, menu de navegação, etc. </li>
+
+        <li><b>(nav) (/nav) :</b> navegação principal da página, nem todo link precisa tá na tag nav. O normal é colocá-la dentro das tags padrão na página (tipo o header), as que não mudam. Normalmente temos um nav dentro do header, por conta de menus e tal.</li>
+
+        <li><b>(main) (/main) :</b> exclusiva para o conteúdo principal da página, nada além. temos que ser semânticos.</li>
+
+        <li><b>(footer) (/footer) :</b> o rodapé da página. dá para por um footer em cada trecho de artigo da página.</li>
+      </ul>
+    <hr>
+
+    <h3>Outras tags</h3>
+      <ul>
+        <li><b>(section)(/section) :</b> Representa uma seção da página, não tem tanto valor semântico, é mais para dividir o conteúdo da página em blocos, separar um conteúdo relevante da página.</li>
+        <li><b>(article)(/article) :</b> É a tag principal do documento. É mais comumente usado para conter informações que podem ser distribuídas independentemente do restante do site ou aplicativo em que aparecem. Tipo aqueles títulos de máterias nas prévias de link.</li>
+        <li><b>(aside)(/aside) :</b> Representa uma seção de uma página que consiste de conteúdo que é tangencialmente relacionado ao conteúdo do seu entorno. Tipo um menu lateral para diferentes páginas do site. Pode ser deixada também para funcionar como um banner de propagandas. </li>
+      </ul>
+      <hr>
+
+      <h3>Tags Não Semânticas</h3>
+        <ul>
+          <li><b>(div)(/div) :</b> Serve para criar blocos, que nos ajudam em questões visuais.</li>
+          <li><b>(span)(/span) :</b> Serve para dar um destaque à uma determinada parte do texto.</li>
+        </ul>
+
+      <img src="https://csharpcorner-mindcrackerinc.netdna-ssl.com/UploadFile/b5be7f/working-with-semantic-elements-in-html5-with-layout-examples/Images/html5Structure.PNG" alt="Estrutura de layout em HTML5" width="400" height="400">
+
+      <img src="http://www.jensjaeger.com/dateien/2011/05/html5-elements.png" alt="Estrutura de layout em HTML5" width="500" height="500">
+
+      <img src="https://4.bp.blogspot.com/-3vqJRIdB2bQ/WofTZOh8dGI/AAAAAAAABT8/mRHTwO6l-t0262yBn-N1yJREWPLYnFvxQCLcBGAs/s1600/youtube.jpg" alt="Estrutura de layout em HTML5" width="400" height="400">
+  </body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que se deve ser renderizada -->
+
+<html lang="pt-br">
+  <head>
+    <title>Tabelas</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Everson" />
+    <meta name="description" content="importante adicionar uma descrição da sua página, ela é aquele textinho que aparece abaixo dos links quando pesquisamos algo no google" />
+    <meta name="keywords" content="html5, tecnologia, web, etc." />
+    <style>
+      a {
+        color: black;
+      }
+
+      table, th, td {
+        border: 1px solid black;
+      }
+
+      dt {
+        font-size: 22px;
+        font-weight: bold;
+      }
+
+      .obs {
+        font-size: 20px;
+        text-decoration: underline;
+      }
+
+      .table-collapse, .td-collapse, .th-collapse {
+        border: 1px solid black;
+      }
+
+      .table-collapse {
+        width: 100%;
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p>"Sempre quando for representar informações em uma tabela, é importante pensar em termos de grades feitas de linhas e colunas"</p>
+    <h2><a href="https://www.w3schools.com/css/css_table.asp" target="_blank">Table</a></h2>
+    <p>A tag <'table> serve para iniciar uma tabela</p>
+
+    <h2>tr (table row)</h2>
+    <p>A tag <'tr> serve para indicar o começo de cada linha da tabela.</p>
+
+    <h2>td (table data)</h2>
+    <p>A tag <'td> serve para representar o conteúdo de cada célula da tabela.</p>
+
+    <h2>th (table heading)</h2>
+    <p>A tag <'th> é usada de um jeito parecido com a tag <'td>, mas o seu propósito é representar o cabeçado, tanto da coluna, quanto da linha</p>
+
+    <h2>Exemplo</h2>
+    <table>
+      <tr>
+        <th></th>
+        <th scope="col">Saturday</th>
+        <th scope="col">Sunday</th>
+      </tr>
+      <tr>
+        <th scope="row">Tickets sold:</th>
+        <td>120</td>
+        <td>135</td>
+      </tr>
+      <tr>
+        <th scope="row">Total sales:</th>
+        <td>$600</td>
+        <td>$675</td>
+      </tr>
+    </table>
+
+    <h2>Table-Layout</h2>
+    <dl>
+      <dt>table-layout: auto</dt> <br />
+      <dd>Valor padrão. A largura da coluna é definida pelo conteúdo inquebrável mais amplo nas células. O conteúdo ditará o layout. Se a linha tiver apenas um elemento, ela vai pegar a largura toda da página. Se tiver mais elementos na linha, ela vai dividir na proporção do tamanho de cada um.</dd>
+      <br />
+
+      <dt>table-layout: fixed</dt> <br />
+      <dd>Define uma largura fixa para a tabela ou coluna. As larguras da tabela e da coluna são definidas pelas larguras da tabela e da coluna ou pela largura da primeira linha de células. As células em outras linhas não afetam as larguras das colunas. Se nenhuma largura estiver presente na primeira linha, as larguras das colunas serão divididas igualmente na tabela, independentemente do conteúdo dentro das células.
+      <p class="obs"><b>Junto da propriedade table-layout é bom passar um width junto</b></p>
+      </dd>
+
+      <dt>border-collapse: collapse | separate(esse é o padrão)</dt>
+      <dd>Separa as bordas por colunas. Ao invés de cada elemento (tabela, coluna, células) terem bordas individuais, as bordas se tornam apenas uma, como uma tabela comum.
+      <h2>Exemplos</h2>
+      <table class="table-collapse">
+        <tr class="tr-collapse">
+          <th class="th-collapse">Firstname</th>
+          <th class="th-collapse">Lastname</th>
+        </tr>
+        <tr class="tr-collapse">
+          <td class="td-collapse">Peter</td>
+          <td class="td-collapse">Griffin</td>
+        </tr>
+        <tr class="tr-collapse">
+          <td class="td-collapse">Lois</td>
+          <td class="td-collapse">Griffin</td>
+        </tr>
+      </table>
+      </dd>
+    </dl>
+  
+    <h2>Abrangendo Colunas</h2>
+    <p></p>
+
+
+    
+  </body>
+</html>

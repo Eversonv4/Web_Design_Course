@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Everson" />
+    <meta name="description" content="importante adicionar uma descrição da sua página, ela é aquele textinho que aparece abaixo dos links quando pesquisamos algo no google" />
+    <meta name="keywords" content="html5, tecnologia, web, etc." />
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
+    <!-- <script src='main.js'></script> -->
+    <style>
+      * {font-family: sans-serif;}
+      article:nth-child(2) a{
+        border: 1px solid #ff0000;
+      }
+
+      article:nth-child(4) > p{
+        border: 1px solid #0000ff;
+      }
+
+      article:nth-child(6) h3 + p {
+        margin-top: 50px;
+        border: 1px solid #00ffff;
+      }
+
+      article:nth-child(8) h3 ~ p {
+        margin-top: 50px;
+        border: 1px solid #ffd900;
+      }
+
+      article:not(.destaque) {
+        background: #50ff68;
+      }
+
+      a[href="#"] {
+        opacity: 0.2;
+      }
+
+      a[href^="https"] {
+        color: #ff0000;
+      }
+
+      a[title] {
+        color: #00ffd5;
+      }
+
+      a[href$=".pdf"] {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <pre><b>
+      article:nth-child(2) a {
+        border: 1px solid #ff0000;
+      }</b>
+    </pre>
+
+    <article>
+      <h3>
+        Título
+      </h3>
+      <p>Parágrafo <a href="#">apenas um link com <b>negrito</b></a></p>
+      <p>Parágrafo <a href="#">apenas um link com <b>negrito</b></a></p>
+      <p>Parágrafo <a href="#">apenas um link com <b>negrito</b></a></p>
+    </article>
+
+    <pre><b>
+      article:nth-child(4) > p {
+        border: 1px solid #0000ff;
+      }</b>
+    </pre>
+
+    <article>
+      <h3>
+        Título
+      </h3>
+      <p>Parágrafo <a href="#">apenas um link com <b>negrito</b></a></p>
+      <p>Parágrafo <a href="#">apenas um link com <b>negrito</b></a></p>
+      <p>Parágrafo <a href="#">apenas um link com <b>negrito</b></a></p>
+    </article>
+
+    <pre><b>
+      article:nth-child(6) h3 + p {
+        margin-top: 50px;
+        border: 1px solid #00ffff;
+      }</b>
+    </pre>
+
+    <article>
+      <h3>
+        Título
+      </h3>
+      <p>Parágrafo <a href="#">apenas um link com <b>negrito</b></a></p>
+      <p>Parágrafo <a href="#">apenas um link com <b>negrito</b></a></p>
+      <p>Parágrafo <a href="#">apenas um link com <b>negrito</b></a></p>
+    </article>
+
+    <pre><b>
+      article:nth-child(8) h3 ~ p {
+        margin-top: 50px;
+        border: 1px solid #ffd900;
+      }</b>
+    </pre>
+
+    <article class="destaque">
+      <h3>
+        Título
+      </h3>
+      <p>Parágrafo <a href="#">apenas um link com <b>negrito</b></a></p>
+      <p>Parágrafo <a href="#">apenas um link com <b>negrito</b></a></p>
+      <p>Parágrafo <a href="#">apenas um link com <b>negrito</b></a></p>
+    </article>
+
+    <ul>
+      <li><a href="#">link falso</a></li>
+      <li><a href="#">link falso</a></li>
+      <li><a href="https://instagram.com" target="_blank">link externo</a></li>
+      <li><a href="site-everson.html" title="exercicio anterior">link interno</a></li>
+      <li><a href="meu-site.com/exercicio.pdf" >link pdf</a></li>
+    </ul>
+
+
+
+
+    <p>Usando a pseudo classe "nth-child(n)". Esse seletor corresponde a cada elemento que é o N-ézimo filho, independentemente do tipo, de seu pai. É preciso específicar o elemento que deseja alterar, por tag ou classe "article:nth-child(número da posição que ele ocupa)" ou ".classe:nth-child(número da posição que ele ocupa)"</p>
+
+    <h2>n pode ser um número, uma palavra-chave ou uma fórmula.</h2>
+
+    <h3>Exemplos</h3>
+    <p class="texto"><b>odd (ímpares)</b> e <b>even (pares)</b> são palavras-chaves que podem ser usadas para corresponder a elementos filhos cujo índice é ímpar ou par (o índice do primeiro filho é 1). No exemplo abaixo, especificamos diferentes background colors para elementos parágrafos ímpares e pares.</p>
+    <pre>
+      p:nth-child(odd) {
+          background: red;
+      }
+
+      p:nth-child(even) {
+          background: blue;
+      }
+    </pre>
+
+    <p class="exemplo1">The first paragraph.</p>
+    <p class="exemplo1">The second paragraph.</p>
+    <p class="exemplo1">The third paragraph.</p>
+    <p class="exemplo1">The fourth paragraph.</p>
+    <p class="exemplo1">The fifth paragraph.</p>
+    <p class="exemplo1">The sixth paragraph.</p>
+
+    <h3>Exemplos</h3>
+    <p class="texto">
+      <b>Usando uma fórmula (an + b)</b>. Descripção: "a" representa o tamanho de um ciclo, "n" é um contador(começa em 0), e "b" é um valor de deslocamento. No exemplo abaixo, especificamos a cor de fundo de todos os elementos <'p> cujo índice é um múltiplo de 3:
+    </p>
+    <pre>
+      p:nth-child(3n + 0) {
+        background: red;
+      }
+    </pre>
+
+    <p class="exemplo2">The first paragraph.</p>
+    <p class="exemplo2">The second paragraph.</p>
+    <p class="exemplo2">The third paragraph.</p>
+    <p class="exemplo2">The fourth paragraph.</p>
+    <p class="exemplo2">The fifth paragraph.</p>
+    <p class="exemplo2">The sixth paragraph.</p>    
+
+    <details>
+      <summary>O que é a netflix?</summary>
+      <p>É um site que produz e transmite séries merdas sobre conteúdos irrelevantes.</p>
+    </details>
+
+    <details>
+      <summary>O que é squid game?</summary>
+      <p>Uma série sobre jogos que matam pessoas que perdem</p>
+    </details>
+    <details>
+      rola rola rola no seu cu no seu cu no seu cu
+    </details>
+
+    <style>
+      .exemplo1:nth-child(odd) {
+        background-color:#7fff00;
+      }
+
+      .exemplo1:nth-child(even) {
+        background-color:#00ffff;
+      }
+
+      .exemplo2:nth-child(3n + 0) {
+        background-color: #9932cc;
+      }
+
+      h2 {
+        font-size: 22px;
+        line-height: 28px;
+        color:#dc143c;
+      }
+    </style>
+  </body>
+</html>

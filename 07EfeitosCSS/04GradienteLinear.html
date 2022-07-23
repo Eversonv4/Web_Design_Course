@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que se deve ser renderizada -->
+
+<html lang="pt-br">
+  <head>
+    <title>Gradient Linear</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Everson" />
+    <meta name="description" content="importante adicionar uma descrição da sua página, ela é aquele textinho que aparece abaixo dos links quando pesquisamos algo no google" />
+    <meta name="keywords" content="html5, tecnologia, web, etc." />
+    <style>
+      html, body {
+        height: 100%;
+      }
+      body {
+        font-family: tahoma;
+        background-image: linear-gradient(290deg , rgba(255, 0, 0, 0.815) 0%, rgba(0, 0, 255, 0.835) 25%, #51ff01d5 50%, rgba(251, 255, 0, 0.726) 75%, #ff006ac2 100%), url(./banner.jpg);
+        /* background-image: linear-gradient(to right, rgba(255, 0, 0, 0.85), transparent), linear-gradient(to left, rgba(0, 0, 255, 0.85), transparent), linear-gradient(to top, rgb(251, 255, 0, 0.85), transparent), linear-gradient(to bottom, rgba(91, 38, 235, 0.85), transparent), url(./banner.jpg); */
+        background-size: auto, none;
+      }
+
+      h1 {
+        font-size: 50px;
+        text-align: center;
+      }
+
+      p {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Gradiente Linear</h1>
+
+    <p><i>**Dá até para usar até mais de um linear-gradient para o mesmo elemento/componente ou até mesmo imagens**</i></p>
+    <h2>Alguns exemplos</h2>
+      <p>background-image: linear-gradient(red, blue);</p>
+      <p>background-image: linear-gradient(to bottom, red, blue);</p>
+      <p>background-image: linear-gradient(to left top, red, blue);</p>
+      <p>background-image: linear-gradient(to right, red, transparent);</p>
+      <p>background-image: linear-gradient(to right, red, transparent), linear-gradient(to left, blue, transparent);</p>
+      <p>background-image: url(./banner.jpg), linear-gradient(to bottom, rgba(91, 38, 235, 0.85), transparent);</p>
+      <p>background-image: url(./banner.jpg), linear-gradient(50deg, red, rgba(91, 38, 235, 0.85));</p>
+      <p>background-image: linear-gradient(70deg , red, blue, white, black, pink);</p>
+      <p>background-image: linear-gradient(90deg , red 0px, blue 200px, white 400px, black 600px, pink 700px);</p>
+      <p></p>
+
+  </body>
+</html>

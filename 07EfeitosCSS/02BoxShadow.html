@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que se deve ser renderizada -->
+
+<html lang="pt-br">
+  <head>
+    <title>Box Shadow</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Everson" />
+    <meta name="description" content="importante adicionar uma descrição da sua página, ela é aquele textinho que aparece abaixo dos links quando pesquisamos algo no google" />
+    <meta name="keywords" content="html5, tecnologia, web, etc." />
+    <style>
+      body {
+        font-family: tahoma;
+      }
+      #bloquinho {
+        background: orange;
+        width: 200px;
+        height: 200px;
+        margin: 50px auto;
+
+        border-radius: 50px 100px / 100px 50px;
+
+        box-shadow: 10px 25px 35px 16px yellow;
+      }
+
+      #bloquinho2 {
+        background: orange;
+        width: 200px;
+        height: 200px;
+        margin: 50px auto;
+
+        border-radius: 50px 100px / 100px 50px;
+
+        box-shadow: -10px -10px 10px rgb(24, 7, 255), 10px 10px 10px red, -10px 10px 10px #ff07ff, 10px -10px 10px #00ff00;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Box Shadow</h1>
+
+    <h2>{ box-shadow: valor-h | valor-v | blur | spread | color | inset | OU none ;}</h2>
+
+    <p>
+      Com o <span>Box Shadow</span>, é possível criar uma espécie de sombra que dá um efeito legal. Ele recebe alguns parâmetros, os primeiros parâmetros são o deslocamento da imagem na horizontal, depois na vertical, depois o nível de "blur", nível de spread para aumentar o tamanho da sombra e depois a cor. tirando a cor, tudo é descrito com pixels. Dá para colocar mais de uma sombra num elemento, basta separar por vírgulas os atributos de cada sombra.
+    </p> 
+    <p>
+      Mas não precisa passar todos esses valores como parâmetro, dá pra passar só o deslocamento vertical e horizontal, depois a cor. Assim: <b>{ box-shadow: 10px 5px red ;}</b>
+    </p>
+
+    
+    <div id="bloquinho"></div>
+    <div id="bloquinho2"></div>
+
+    <h3>valor-h</h3>
+    <p>Um valor positivo coloca a sombra no lado direito da caixa, um valor negativo coloca do lado esquerdo.</p>
+
+    <h3>valor-v</h3>
+    <p>Um valor positivo coloca a sombra embaixo da caixa, um valor negativo coloca acima da caixa.</p>
+
+    <h3><i>blur</i></h3>
+    <p>Quanto mais alto o valor do número, mais borrado a sombra ficará.</p>
+
+    <h3>Spread</h3>
+    <p>Um valor positivo vai aumentar o tamanho da sombra, um valor negativo vai diminui-la.</p>
+
+    <h3>Inset</h3>
+    <p>Muda a sombra de uma sombra externa, para uma sombra interna. <b>Esse atributo deve ser colocado após a cor</b>.</p>
+  </body>
+</html>

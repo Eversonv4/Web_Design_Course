@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Everson" />
+    <meta name="description" content="importante adicionar uma descrição da sua página" />
+    <meta name="keywords" content="html5, tecnologia, web, etc." />
+    <style>
+      a:link{
+        color: aqua;
+      }
+
+      a:visited{
+        color: hotpink;
+      }
+
+      a:hover, a:active {
+        background-color: red;
+      }
+
+      li.circle {
+        list-style-type: circle;
+      }
+      li.tipo_none {
+        list-style-type: none;
+      }
+      li.square {
+        list-style-type: square;
+      }
+      li.upper_roman {
+        list-style-type: upper-roman;
+      }
+      li.tipo_decimal {
+        list-style-type: decimal;
+      }
+      li.leading_zero {
+        list-style-type: decimal-leading-zero;
+      }
+      li.lower_alpha {
+        list-style-type: lower-alpha;
+      }
+      li.outisde {
+        list-style-position: outside;
+      }
+      li.inside {
+        list-style-position: inside;
+      }
+      li.position_none {
+        list-style-position: none;
+      }
+      li.url_img {
+        list-style-image: url("https://icons.iconarchive.com/icons/martz90/hex/16/css-3-icon.png");
+      }
+      li.none_img {
+        list-style-image: none;
+      }
+      li.inicial_img {
+        list-style-image: initial;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Pseudo-classes</h1>
+    <ul>
+      <li><b>a:link{ ... }</b> - É o link normal, sem ter sido visitado</li>
+      <li><b>a:visited{ ... }</b> - É o link depois de visitado</li>
+      <li><b>a:hover{ ... }</b> - É quando o mouse está em cima do link</li>
+      <li><b>a:active{ ... }</b> - É o link no momento que foi clicado</li>
+    </ul>
+    <p>
+      <ul>
+        <li>a:hover <b>DEVE</b> vir depois do a:link and a:visited</li>
+        <li>a:active <b>DEVE</b> vir depois do a:hover</li>
+      </ul>
+    </p>
+    <p>Exemplo:<br/>
+      <b>a:link, a:visited</b> {<br/>
+        background-color: #f44336;<br/>
+        color: white;<br/>
+        padding: 14px 25px;<br/>
+      }<br/>
+      <br/>
+      <b>a:hover, a:active</b> {<br/>
+        background-color: red;<br/>
+      }
+    </p>
+    <a href="http://www.google.com" target="_blank">Isso é um link</a>
+
+    <h2>List-Style</h2>
+    <p>Além dos modelos de lista ordenada (ol) e não ordenadas (ul). temos os estilos</p>
+
+    <p><b>list-style-type: circle/none/square/upper-roman/decimal/decimal-leading-zero/lower-alpha</b></p>
+      <ul>
+        <li class="circle">Tipo: circle</li>
+        <li class="tipo_none">estilo: none</li>
+        <li class="square">Tipo: square</li>
+        <li class="upper_roman">Tipo: upper-roman</li>
+        <li class="tipo_decimal">Tipo: decimal</li>
+        <li class="leading_zero">Tipo: decimal-leading-zero</li>
+        <li class="lower_alpha">Tipo: lower-alpha</li>
+      </ul>
+
+    <p><b>list-style-position: outside/inside/none</b></p>
+      <ul>
+        <li class="outside">Position: outside</li>
+        <li class="inside">Position: inside</li>
+        <li class="position_none">Position: none</li>
+      </ul>
+
+    <p><b>list-style-image: url("link da imagem")/none/inicial</b></p>
+      <ul>
+        <li class="url_img">Imagem: url("link de imagem")</li>
+        <li class="none_img">Imagem: none</li>
+        <li class="inicial_img">Imagem: inicial</li>
+      </ul>
+      
+    <h2>Passar os estilos em apenas uma linha</h2>
+    <p>list-style: list-style-type list-style-position list-style-image ;</p>
+  </body>
+</html>

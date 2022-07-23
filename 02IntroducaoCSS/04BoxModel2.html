@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que se deve ser renderizada -->
+
+<html lang="pt-br">
+  <head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Everson" />
+    <meta name="description" content="importante adicionar uma descrição da sua página" />
+    <meta name="keywords" content="html5, tecnologia, web, etc." />
+    <style>
+      ul{
+        border: dashed 5px red;
+      }
+
+      .pborda{
+        border-style: solid;
+        border-width: 10px;
+        padding: 15px;
+        border-color: red #2bff2b blue yellow;
+      }
+
+      .estilo_borda {
+        border-width: 5px;
+        border-style: dotted solid double dashed;
+        padding: 15px;
+      }
+
+      .borda_largura {
+        border-style: solid;
+        border-width: 50px 40px 30px 20px;
+        padding: 2.5px;
+      }
+
+      .borda_raio {
+        border-style: solid;
+        border-radius: 15px 50px 30px 5px;
+        border-color: #73AD21;
+        border-width: 30px;
+        margin-right: 30px;
+        padding: 2.5px;
+        
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Outros exemplos de como trabalhar com Margin:</h2>
+    <p>Se usar "margin: auto ;" ele centraliza o elemento no meio da tela, mas só na horizontal. usando "margin: 30px auto ;" ele centraliza, e o primeiro valor é altura, faz o elemento descer um pouco.</p>
+    
+    <p>p { <br/>
+      margin-top: 50px; <br/>
+      margin-right: 40px; <br/>
+      margin-bottom: 30px; <br/>
+      margin-left: 20px; <br/>
+    }</p>
+    <b>Mas também podemos escrever essas propriedades em uma única linha escrevendo apenas "margin", a ordem das dimensões segue o sentido horário, começando por cima.</b>
+
+    <p>p { margin: 50px 40px 30px 20px ;}</p>
+    <p>p { margin: (cima) (direita) (baixo) (esquerda) ;}</p>
+    Segue essa ordem
+    
+
+    <h2>Outros exemplos de como trabalhar com Padding:</h2>
+    <p>p { <br/>
+      padding-top: 50px; <br/>
+      padding-right: 40px; <br/>
+      padding-bottom: 30px; <br/>
+      padding-left: 20px; <br/>
+    }</p>
+
+    <b>A ordem é a mesma que a do margin</b>
+
+    <h5>p { padding: 50px 40px 30px 20px ;}</h5>
+    <h5>p { padding: (cima) (direita) (baixo) (esquerda) ;}</h5>
+    <hr>
+
+    <h2>Abreviando margin/padding</h2>
+    <p>Se passamos as dimensões em 3 ou menos direções. O próprio css assimila os outros valores com base nos que foram passados. Ex:</p>
+    <h4>p { padding: 50px 40px 30px ;}</h4>
+    <p>Não passamos um padding na direção esquerda, mas o próprio css assume o mesmo valor que foi passado em seu lado oposto (direita). Ou seja, o padding da esquerda fica com 40px. </p>
+    <p>Se passarmos menos de 3 valores, ele faz o mesmo, pega os mesmo valores das suas dimensões opostas que foram passados e os replica. Se passarmos apenas 50px para cima, ele vai adicionar esse valor para todo o resto (direita, baixo, esquerda).</p>
+    <hr>
+
+    <h1>Border</h1>
+    <p><b>border-top/right/bottom/left: largura em pixels;</b></p>
+
+    <p>Podemos fazer também. Assim como no padding, margin, etc:<br/><br/></p>
+    <p class="borda_largura">  p { <b>border-width:</b> 50px(cima) 40px(direita) 30px(baixo) 20px(esquerda) ;} </p>
+
+    <p class="pborda">p { <b>border-color:</b> red(cima) green(direita) blue(baixo) yellow(esquerda) ;} </p>
+
+    <p class="estilo_borda">p { <b>border-style:</b> dotted(cima) solid(direita) double(baixo) dashed(esquerda) ;}</p>
+
+    <p class="borda_raio">  p { <b>border-radius:</b> 15px(cima-esquerda) 50px(cima-direita) 30px(baixo-direita) 5px(baixo-esquerda) ;} </p>
+    
+    <b>Alguns outros exemplos de como implementar bordas e efeitos:</b>
+
+    <p>h1 {<br/>
+      border-style: dotted; <br/>
+      boder-width: 5px; <br/>
+      border-color: red; <br/>
+    }</p>
+    
+    <p>p { <br/>
+      border-top-style: dotted; <br/>
+      border-right-style: solid; <br/>
+      border-bottom-style: dotted; <br/>
+      border-left-style: solid; <br/>      
+    }</p>
+
+    <p>p { <br/>
+      border-top-color: purple; <br/>
+      border-right-color: blue; <br/>
+      border-bottom-color: orange; <br/>
+      border-left-color: green; <br/>      
+    }</p>
+
+    <p>p { <br/>
+      border-top-left-radius: 15px; <br/>
+      border-top-right-radius: 50px; <br/>
+      border-bottom-right-radius: 30px; <br/>
+      border-bottom-left-radius: 5px; <br/>
+    }</p>
+    
+
+    <h3>Border possui uma ordem em suas atribuições de tipos de valores:</h3>
+
+    <h4>p { border: dotted 5px red ;}</h4>
+    <h4>p { border: (style) (width) (cor) ;}</h4>
+    <h4>Exemplo: p { border-top: solid 10px blue ;}</h4>
+    <hr>
+
+    <h3>Alguns valores para border-style:</h3>
+    <ul id="js">
+      <li><b>dotted</b> - Defines a dotted border</li>
+      <li><b>dashed</b> - Defines a dashed border</li>
+      <li><b>solid</b> - Defines a solid border</li>
+      <li><b>double</b> - Defines a double border</li>
+      <li><b>groove</b> - Defines a 3D grooved border. The effect depends on the border-color value</li>
+      <li><b>ridge</b> - Defines a 3D ridged border. The effect depends on the border-color value</li>
+      <li><b>inset</b> - Defines a 3D inset border. The effect depends on the border-color value</li>
+      <li><b>outset</b> - Defines a 3D outset border. The effect depends on the border-color value</li>
+      <li><b>none</b> - Defines no border</li>
+      <li><b>hidden</b> - Defines a hidden border</li>
+    </ul>
+
+  </body>
+  <script>
+    document.getElementById("js").style.borderRadius="25px";
+    // e não é que funciona mesmo!
+  </script>
+</html>

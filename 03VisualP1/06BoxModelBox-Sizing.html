@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que se deve ser renderizada -->
+
+<html lang="pt-br">
+  <head>
+    <title>Box-Sizing</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Everson" />
+    <meta name="description" content="importante adicionar uma descrição da sua página, ela é aquele textinho que aparece abaixo dos links quando pesquisamos algo no google" />
+    <meta name="keywords" content="html5, tecnologia, web, etc." />
+
+    <style>
+      div {
+        background: orange;
+        width: 150px;
+        height: 150px;
+        margin: 10px;
+        float: left;
+      }
+
+      #div1 {
+        padding: 25px;
+      }
+
+      #div2 {
+        padding: 25px;
+        box-sizing: border-box;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <h1>Box-Sizing</h1>
+      <p>Normalmente, a altura e largura de um elemento é calculada assim:</p>
+      <p>width + padding + border = largura total de um elemento <br />
+      height + padding + border = altura total de um elemento</p>
+
+      <p>Essa propriedade define como a largura e altura de um elemento são calculadas: devem incluir preenchimento e bordas ou não.</p>
+
+      <p>Normalmente, quando especificamos a largura e altura de um componente e logo depois adicionamos um padding, as dimensões aumentam em todas as direções. </p>
+      <p><b>Por exemplo:</b> Um componente com altura de 100px e largura de 50px, ao acrescentar um padding de 25px, o tamanho externo (das bordas) terá uma altura de 150px, pq foi adicionado 25px tanto pra cima quanto pra baixo, e a largura de 100px, pois foi adicionado 25px tanto à esquerda quanto à direita.</p>
+
+      <h2>Usando Box-Sizing:</h2>
+      <p>Ao usar a propriedade box-sizing: border-box; junto às outras propriedades de altura, largura e padding, você garante que os valores passados serão os valores reais do componente. O que ele faz é diminuir o tamanho do conteúdo central, se necessário. Para que se adeque às medidas passadas.</p>
+
+      <h2>{ box-sizing: border-box | content-box | initial | inherit }</h2>
+      <ul>
+        <li><b>content-box</b> Valor padrão. É o que normalmente o css faz, sem a necessidade de usar box-sizing. Ele soma os valores de padding acima dos valores de largura e altura, fazendo com que o componente em si seja maior que os valores de dimensões passados.</li>
+        <li><b>border-box</b> O que ele faz é diminuir o tamanho do conteúdo central, se necessário. Para que se adeque às medidas passadas.</li>
+      </ul>
+    
+      <h2>Estrutura básica</h2>
+      <div id="div3">content-box</div>
+      <div id="div1">content-box</div>
+      <div id="div4">border-box</div>
+      <div id="div2">border-box</div>
+      <br />
+      <p>Ambas as divs(content-box e border-box) receberam um atributo padding de 25px: uma aumentou o tamanho do seu componente, mantendo tamanho do conteúdo intacto. A outra manteve o tamanho do seu componente igual, mas diminuiu as dimensões do seu conteúdo para se adequar às medidas passadas.</p>
+  </body>
+</html>

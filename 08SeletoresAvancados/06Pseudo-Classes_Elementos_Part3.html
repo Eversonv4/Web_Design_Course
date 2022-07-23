@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Everson" />
+    <meta name="description" content="importante adicionar uma descrição da sua página, ela é aquele textinho que aparece abaixo dos links quando pesquisamos algo no google" />
+    <meta name="keywords" content="html5, tecnologia, web, etc." />
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
+    <!-- <script src='main.js'></script> -->
+    <style>
+      div p:nth-child(4) {
+        color: red;
+      }
+
+      div p:nth-of-type(4) {
+        color: #48ff00;
+      }
+
+
+      .destaque:nth-of-type(5) {
+        background: blueviolet;
+      }
+
+      div>.destaque:first-child {
+        background: linear-gradient(to right, aquamarine, aqua);
+      }
+
+      p:last-child {
+        color: peru;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <p class="destaque">meu parágrafo</p>
+      <p>meu parágrafo</p>
+      <hr>
+
+      <p class="destaque">meu parágrafo</p>
+      <p>meu parágrafo</p>
+      <hr>
+
+      <p class="destaque">meu parágrafo</p>
+      <p>meu parágrafo</p>
+      <hr>
+
+      <p>meu parágrafo</p>
+      <p>meu parágrafo</p>
+    </div>
+
+    <p>Usando a pseudo-classe :nth-child(), ele irá contar todos os elementos da tela como sendo um "filho", independente de ter-mos parágrafos, barras horizontais para separar os textos <'hr>. Agora, no caso de quisermos especificar um tipo específico de filho que ele deveria pegar, por exemplo: eu quero que ele para fazer a contagem dos filhos, ele considere apenas os parágrafos, nenhum outro elemento. Usamos:</p>
+
+    <pre>
+      p:nth-of-type {
+        color: blue;
+      }
+    </pre>
+
+    <p>Nesse caso, ele só irá contar os parágrafos, o primeiro = 1, o segundo = 2, e assim por diante. O problema é que esse "type" que ele leva em consideração está ligado diretamente à tag. Se tivéssemos alguns parágrafos e eles tivesses classes, ao tentar usar a pseudo-classe "nth-of-type" referenciando os parágrafos pela classe, não funcionaria perfeitamente. Pois ele só leva em consideração o tipo = tipo do elemento/tag. Levando em consideração a seguinte situação:</p>
+
+    <pre>
+      .destaque:nth-of-type(1) {
+        color: green;
+      }
+    </pre>
+
+    <p>Essa propriedade meio que faz uma situação condicional antes de adicionar a propriedade css, tipo "Vou selecionar o primeiro(1) parágrafo que tem a classe destaque", se o primeiro parágrafo não tiver a classe "destaque", ele não irá atribuir tal propriedade.</p>
+  </body>
+</html>

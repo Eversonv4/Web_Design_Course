@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Everson" />
+    <meta name="description" content="importante adicionar uma descrição da sua página, ela é aquele textinho que aparece abaixo dos links quando pesquisamos algo no google" />
+    <meta name="keywords" content="html5, tecnologia, web, etc." />
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
+    <!-- <script src='main.js'></script> -->
+    
+  </head>
+
+  <body>
+    <h1>
+      <a href="#pseudo-classes">:pseudo-classes</a> <br />
+      <a href="#pseudo-elementos">::pseudo-elementos</a>
+    </h1>
+
+    <div class="pseudo-classes" id="pseudo-classes">
+      <ul>
+        <li>:checked</li>
+        <li>:disabled</li>
+        <li>:enabled</li>
+        <li>:empty</li>
+        <li>:first-child</li>
+        <li>:first-of-type</li>
+        <li>:focus</li>
+        <li>:hover</li>
+        <li>:invalid</li>
+      </ul>
+      <ul>
+        <li>:last-child</li>
+        <li>:last-of-type</li>
+        <li>:link</li>
+        <li>:not()</li>
+        <li>:nth-child()</li>
+        <li>:nth-last-child()</li>
+        <li>:nth-last-of-type()</li>
+        <li>:nth-of-type()</li>
+        <li>:only-child()</li>
+      </ul>
+      <ul>
+        <li>:only-of-type</li>
+        <li>:out-of-range</li>
+        <li>:read-only</li>
+        <li>:read-write</li>
+        <li>:required</li>
+        <li>:target</li>
+        <li>:valid</li>
+        <li>:visited</li>
+      </ul>
+    </div>
+
+    <dl>
+      <dt>:checked</dt>
+      <dd>Serve para formatar um input do tipo radio ou checkbox. Dá para acessar o estado de quando aquele elemento está checado, a parti dessa pseudo-classe</dd>
+    </dl>
+
+    <dl>
+      <dt>:disabled</dt>
+      <dd>Dá para formatar um botão utilizando essa classe.</dd>
+    </dl>
+
+    <dl>
+      <dt>:empty</dt>
+      <dd>Quando eu tenho uma tag vazia, ou um parágrafo sem conteúdo nenhum, eu posso ir lá e esconder, por exemplo. </dd>
+    </dl>
+
+    <dl>
+      <dt>:enabled</dt>
+      <dd>Quando eu tenho um botão que está desabilitado.</dd>
+    </dl>
+
+    <dl>
+      <dt></dt>
+      <dd></dd>
+    </dl>
+
+    <dl>
+      <dt></dt>
+      <dd></dd>
+    </dl>
+
+    <div class="pseudo-elementos" id="pseudo-elementos">
+      <ul>
+        <li>::before</li>
+        <li>::after</li>
+        <li>::first-letter</li>
+        <li>::first-line</li>
+        <li>::selection</li>
+        <li>::placeholder</li>
+      </ul>
+    </div>
+
+
+    <style>
+      body {font-family: tahoma, sans-serif;}
+      h1 { font-size: 2rem; line-height: 2.5rem; text-align: center;}
+      a {text-decoration: none; color: inherit;}
+      .pseudo-classes, .pseudo-elementos {
+        margin: 10px auto;
+        width: 400px;
+        height: auto;
+        display: flex;
+        box-sizing: border-box;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      ul li {
+        margin: 15px 10px;
+      }
+
+      dt {
+        font-weight: bold;
+        font-size: 1.2rem;
+        background: #d4d4d4;
+        display: inline-table;
+      }
+    </style>
+  </body>
+</html>

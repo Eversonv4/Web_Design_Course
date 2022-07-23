@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que se deve ser renderizada -->
+
+<html lang="pt-br">
+  <head>
+    <title>Formulário</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Everson" />
+    <meta name="description" content="importante adicionar uma descrição da sua página, ela é aquele textinho que aparece abaixo dos links quando pesquisamos algo no google" />
+    <meta name="keywords" content="html5, tecnologia, web, etc." />
+    <style>body { font-family: tahoma ;}</style>
+  </head>
+
+  <body>
+    <h1>Principais Tags</h1>
+      <h2><'form></h2>
+        <p><b>Exemplo:</b> Ao criar um formulário e colocar seus campos de input dentro dele, todos estarão relacionados de alguma forma. Ao clicar no botão input com o atributo "submit", ele automaticamente envia o conteúdo dos outros campos input dentro da tag Form. O atributo "name" do input text, serve para especificar o modo com que o servidor está esperando receber os dados, pra saber o que é cada um, é como se você passase um dado é um parâmetro. </p>
+
+        <p>No caso do google, para fazer uma pesquisa, no url ele recebe algo tipo "q=texto_passado_no_input". Com isso, complet a url de pesquisa, ficando "google.com/search?q=texto_passad_no_input".</p>
+
+        <p>O atributo "action" da tag form, serve para indicar qual página ou servidor irá receber os dados do formulário. o método "get" está relacionado ao meio de envio, e existe o método "post", além do "get". Nesse exemplo, estamos enviando os dados para o servidor do google. </p>
+
+        <form action="http://google.com/search" method="get" target="_blank">
+          <input type="text" name="q">
+          <input type="submit" value="OK">
+        </form>
+      
+      <h2>Semântica em Formulários</h2>
+        <p>Trabalhando legendas em campos de formulários, assim como legendamos imagens. É importante por conta da acessibilidade. Usamos a tag <'label> para colocar a legenda. O atributo "for" do label serve para indicar qual o campo de input para qual aquela legenda descreve. Precisamos unir esse "for" com o input certo, fazemos isso por meio do "id", e ambos (for e id) recebem o mesmo nome. </p>
+
+        <form action="http://google.com/search" method="get" target="_blank">
+          <label for="txt_busca">Faça uma busca</label>
+          <input type="text" name="q" id="txt_busca">
+          <input type="submit" value="OK">
+        </form>
+      
+      <h2>Organizando Entrada de Dados</h2>
+        <p>A tag <b><'fieldset></b> serve para colocar um grupo de input dentro de uma caixinha. É bastante útil para separar os formulários em blocos. E para cada bloco fieldset, temos uma legenda que é colocada por meio da tag <b><'legend></b>. </p>
+        <form action="pagina.php" method="post">
+          <fieldset>
+            <legend>Login</legend>
+            <label for="log">User:</label>
+            <input type="text" name="text" id="log">
+            <label for="pass">Password:</label>
+            <input type="password" name="pass" id="pass">
+          </fieldset>
+          <input type="submit" value="Login">
+        </form>
+      
+      <h2>Tipos de Entradas de Dados</h2>
+        <h3>* input padrão</h3>
+        <ul>
+          <li><b>text</b></li>
+          <li><b>password</b></li>
+          <li><b>checkbox</b></li>
+          <li><b>radio</b></li>
+          <li><b>file</b></li>
+          <li><b>hidden</b></li>
+          <li><b>submit</b></li>
+          <li><b>button</b></li>
+          <li><b>reset</b></li>
+        </ul>
+
+        <ul>
+          <li><b>textarea</b></li>
+          <li><b>select</b></li>
+          <li><b>option</b></li>
+        </ul>
+
+        <h3>* input (HTML5)</h3>
+        <ul>
+          <li><b>email</b></li>
+          <li><b>tel</b></li>
+          <li><b>url</b></li>
+          <li><b>search</b></li>
+          <li><b>number</b></li>
+          <li><b>range</b></li>
+          <li><b>date</b></li>
+          <li><b>time</b></li>
+          <li><b>color</b></li>
+        </ul>
+
+      <h2>Alguns Atributos</h2>
+        <ul>
+          <li><b>autofocus</b></li>
+          <li><b>checked</b></li>
+          <li><b>required</b></li>
+          <li><b>maxlength</b></li>
+          <li><b>multiple</b></li>
+          <li><b>placeholder</b></li>
+        </ul>
+        <ul>
+          <li><b>max</b></li>
+          <li><b>min</b></li>
+          <li><b>cols</b></li>
+          <li><b>rows</b></li>
+          <li><b>size</b></li>
+          <li><b>step</b></li>
+        </ul>
+
+      <h2>CSS em Formulários</h2>
+        <form action="#" method="POST" class="formLogin">
+          <fieldset>
+
+            <legend>Login</legend> 
+
+            <label for="user">Digite o seu usuário/email</label>
+            <input type="text" name="user" id="user" autofocus>
+
+            <label for="pass">Digite a senha</label>
+            <input type="password" name="pass" id="pass" >
+
+            <input type="submit" value="Logar" class="botao">
+
+          </fieldset>
+        </form>
+        <style>
+
+          input {
+            font-family: tahoma;
+          }
+
+          .formLogin {
+            width: 250px;
+            margin: 50px auto;
+          }
+
+          .formLogin label {
+            margin-top: 15px;
+            display: block;
+            margin-bottom: 5px;
+          }
+
+          .formLogin fieldset {
+            background-image: linear-gradient(to left, #25a1f378, #2efbfb67);
+          }
+
+          .formLogin legend {
+            background-color: #79f8f8e1;
+            border: 2px solid #20bebea2;
+            border-radius: 50px;
+            padding: 0 5px;
+            font-weight: bold;
+          }
+
+          #user, #pass, .botao {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 15px;
+            font-size: 18px;
+            border: none;
+          }
+
+          #user:focus, #pass:focus {
+            background: rgba(251, 86, 136, 0.637);
+          }
+
+          #user {
+            margin-bottom: 15px;
+          }
+
+          .botao {
+            margin-top: 15px;
+          }
+
+        </style>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que se deve ser renderizada -->
+
+<html lang="pt-br">
+  <head>
+    <title>Propriedade Display</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Everson" />
+    <meta name="description" content="importante adicionar uma descrição da sua página" />
+    <meta name="keywords" content="html5, tecnologia, web, etc." />
+    <style>
+    a {
+      color: black;
+    }
+    ul {
+      background-image: linear-gradient(to bottom right, yellow, hotpink)
+    }
+
+
+    #alinhar {
+      display: inline-flex;
+      align-items: center;
+      background-color: rgba(255, 255, 0, 0.596);
+    }
+    .everson {
+      padding: 0 10px;
+    }
+    #radius {
+      background: orange;
+      height: 1px;
+      width: 100px;
+    }
+
+    </style>
+  </head>
+
+  <body>
+    <h1><a href="https://www.w3schools.com/cssref/pr_class_display.asp" target="_blank">Propriedade Display</a></h1>
+    <p>Exemplo: body { display: inline | block | inline-block | contents | none | tem mais no site ;}</p>
+      <h2>inline</h2>
+      <p>Ele divide os elementos da página em blocos. Ele funciona com se fosse uma única linha, vai colocando as coisas uma do lado da outra até pegar toda a largura da página ou container. Não se aplica propriedades de model box em elementos de linha.</p>
+
+      <h2>inline-flex</h2>
+      <p>Mostra um elemento como se fosse um objeto inline, serve para alinhar em linha objetos que normalmente são blocos. Tipo alinhar divs, que normalmente ficariam cada uma em seu bloco, em linhas diferentes</p>
+
+      <div id="alinhar">
+        <div id="radius"></div>
+        <p class="everson"> Everson </p>
+        <div id="radius"></div>
+      </div>
+
+      <h2>block</h2>
+      <p>Também divide os elementos da página em blocos. Ele normalmente ocupa a área toda disponível(a largura toda a página ou de um container, width 100%) e vai gerar uma quebra de linha. Fazendo com que os elementos fiquem um em baixo do outro. </p>
+
+      <h2>inline-block</h2>
+      <p>O elemento se comporta como elemento de linha, mas com características de um elemento de bloco. Não gera quebra de linha.</p>
+
+      <h2>contents</h2>
+      <p>Faz com que o contêiner desapareça, tornando os elementos filhos, filhos do elemento no próximo nível acima no DOM </p>
+
+      <h2>none</h2>
+      <p>Essa propriedade retira da página o elemento selecionado.</p>
+
+      <h2 class="h2-visibility"><a href="https://www.w3schools.com/cssref/pr_class_visibility.asp" target="_blank">Visibility</a></h2>
+      <p>Essa propriedade esconde um elemento, ele continua lá no texto, ocupando espaço da página, mas não é possível visualizá-lo. fica só um espaço em branco onde esse elemento deveria estar.</p>
+      <p>Exemplo: body { visibility: hidden | visible | collapse | initial | inherit ;}</p>
+        <ul>
+          <li><strong>Hidden: </strong> Bastante intuitivo, ESCONDER ALGO.</li>
+          <li><strong>Visible: </strong> Também bastante intuitivo, MOSTRAR ALGO QUE FOI/ESTÁ ESCONDIDO.</li>
+          <li><strong>Collapse: </strong> Apenas para linhas da tabela (<'tr>), grupos de linhas (<'tbody>), colunas (<'col>), grupos de colunas (<'colgroup>). Este valor remove uma linha ou coluna, mas não afeta o layout da tabela. O espaço ocupado pela linha ou coluna ficará disponível para outros conteúdos.
+          Se o collapse for usado em outros elementos, ele será processado como "oculto" </li>
+        </ul>
+
+      <h1>Usar *{ propriedade: valor } é um jeito CSS de marcar todos os elementos da página.</h1>
+      <h2>Ex: *{ display: inline-block ;}</h2>
+  </body>
+</html>

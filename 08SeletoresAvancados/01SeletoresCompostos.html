@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Everson" />
+    <meta name="description" content="importante adicionar uma descrição da sua página, ela é aquele textinho que aparece abaixo dos links quando pesquisamos algo no google" />
+    <meta name="keywords" content="html5, tecnologia, web, etc." />
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
+    <!-- <script src='main.js'></script> -->
+    <style>body {font-family: Tahoma, sans-serif;} </style>
+  </head>
+
+  <body>
+    DOM(Document Object Model)
+    <p>
+      Esse assunto é mais para entender as hierarquias entre os componentes do documento HTML. Nesse exemplo, o Article é pai do H3 e dos parágrafos P, que por sua vez é pai do A, que é pai do B.<br />
+      No momento de estilizar algo no css, é interessante saber quem está contido em cada grau de parentesco. Para esitilizar o A, faríamos algo do tipo "article p a", onde cada espaço serve para indicar que estamos indo mais a fundo nos graus de parentescos.
+    </p>
+    <p>
+      <blockquote class="imgur-embed-pub" lang="en" data-id="j1gVYky"><a href="https://imgur.com/j1gVYky">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+    </p>
+    <p>
+      <blockquote class="imgur-embed-pub" lang="en" data-id="tq4XuAe"><a href="https://imgur.com/tq4XuAe">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+    </p>
+
+    <p>
+      No lugar da gente querer selecionar todos os A que são filhos direto de P, isso quer dizer que mesmo que eu fizesse "article p > b", ele não faria nada, a propriedade que eu passasse não iria ser aplicada, pois não existe nenhum B filho direto de P. O filho de P é o A, que é pai de B. Podemos fazer da seguinte forma<br />
+      <h4>Descendência</h4>
+      <h3>article p > a {color: red;}</h3>
+      No caso da gente querer indicar o irmão adjacente, ou seja, o irmão seguinte do elemento anterior, fazermos da seguinte forma e ele vai selecionar apenas o parágrafo que vem em seguida, dentro do article:<br />
+      <h4>Irmão adjascente</h4>
+      <h3>article h3 + p {color: red;}</h3>
+      Considerando os exemplos da imagens, se considerássemos <b>article p + p {color: red;}</b> ele selecionaria os dois últimos parágrafos, pois ambos são Parágrafos que vem antes de outro Paráfrafo.<br />
+      <br />
+      Podemos também selecionar todos os irmãos que vem <b>DEPOIS</b> de um elemento. Por exemplo, vamos selecionar todos os irmãos que vem depois do H3:
+      <h4>Próximos Irmãos</h4>
+      <h3>article h3 ~ p {color: red;}</h3>
+    </p>
+
+    <h2>SELETORES DE ATRIBUTOS</h2>
+    <p>
+      Essa é uma forma que podemos usar para selecionar um elemento específico quando temos vários desse tipo no nosso article/parágrafo/div/etc. Por exemplo, temos um article que dentro tem dois links, um com o atributo Title e ou sem:<br />
+      <b><'a title=""> Com Title <'/a></b>  <br />
+      <b><'a>Sem Title<'/a></b> <br />
+      Para selecionar apenas o link que possui Title, usamos colchetes e colocamos dentro dele o nome do atributo:
+      <h3>a[title] {color: red;}</h3>
+    </p>
+    <p>No de dois links possuir o atributo Title, podemos referenciar aquele que desejamos, passando como referência o valor que foi colocado dentro do atributo:</p>
+    <p>
+      <b> 
+        <'img alt="Praia"> 
+      </b> 
+      <br />
+
+      <b> 
+        <'img alt="Ilha"> 
+      </b> 
+      <br />
+
+      <p>Para referenciar apenas uma, usamos:</p>
+      <h3>img[alt="Ilha"] {padding: 20px;}</h3>
+    </p>
+
+    <p>
+      Podemos referenciar um ou vários elementos com base nos valores. Em caso de alguns valores se repetirem, pode-se usar isso como base para referenciar o elemento:
+      <p>
+        <b> 
+          <'a href="..."> <'a>
+        </b> 
+        <br />
+  
+        <b> 
+          <'a href="http://..."> <'a>
+        </b> 
+        <br />
+
+        <b> 
+          <'a href="http://www..."> <'a>
+        </b> 
+        <br />
+
+        <h3>a[href^="http"] {color: red;}</h3>
+        Aqui ele vai atribuir essas propriedades para todos os links que no seu atributo HREF tem como valor uma URL começando com "http". <br />
+
+        <h3>Também temos o inverso, referenciando Tags por meio de atributos que receberam valores parecidos.</h3>
+
+        <p>
+          Podemos referenciar elementos com base nos últimos caracteres dos valores que foram adicionados nos atributos. Por exemplo:
+        </p>
+        <ul>
+          <li><'img src="...jpg"></li>
+          <li><'img src="...png"></li>
+          <li><'img src="...jpg"></li>
+        </ul>
+        Podemos referenciar as imagens que queremos com base no seu atributo SRC e nos seus últimos caracteres.
+        <h3>img[src$=".png"] {border: 3px solid red ;} </h3>
+        E selecionamos apenas as imagens que terminam com ".png".
+      </p>
+    </p>
+
+    <h2>Podemos usar tbm o <u>:not()</u></h2>
+    <p>
+      Nesse caso, estamos querendo referenciar alguma coisa, exceto outra coisa. Exemplo:
+    </p>
+
+    <p>
+      Estamos referenciando todos elementos da página, menos os links (a) <br />
+      <b>
+        :not(a) { color: red ;}
+      </b>
+    </p>
+    <p>
+      Estamos referenciando todos os parágrafos, menos aqueles que possuem a classe "destaque" <br />
+      <b>
+        p:not(.destaque) { color: red ;}
+      </b>
+    </p>
+    <p>
+      Estamos referenciando todas as imagens, menos aquelas que possuem o atributo "alt" <br />
+      <b>
+        img:not([alt]) { display: none ;}
+      </b>
+    </p>
+
+    <h1 style="color: red; ">Existem outros atributos que valem a pena serem pesquisados no <u>w3schools.com</u> e no <u>developer.mozilla.org</u> </h1>
+  </body>
+</html>

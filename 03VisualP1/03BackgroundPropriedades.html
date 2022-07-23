@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que se deve ser renderizada -->
+
+<html lang="pt-br">
+  <head>
+    <title>Background Propriedades</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Everson" />
+    <meta name="description" content="importante adicionar uma descrição da sua página" />
+    <meta name="keywords" content="html5, tecnologia, web, etc." />
+    <style>
+      /*body {
+        background-image: linear-gradient(to bottom right, #ff9999, #9e9eff);
+      }*/
+
+      h1 {
+        border-left: 8px solid rgb(68, 68, 216);
+        border-right: 8px solid #4444d8;
+        padding-left: 10px;
+        margin-right: auto;
+        border-radius: 10px;
+      }
+
+      p {
+        background-image: linear-gradient(to bottom right, #ff9999, #9e9eff);
+      }
+
+      li, p {
+        padding: 1.5px;
+      }
+      
+      ul/*, li, p */ {
+        border: 2px solid red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>CSS Background Propriedades:</h1>
+      <ul>
+        
+        <li class="topicos"><h3><a href="https://www.w3schools.com/cssref/pr_background-attachment.asp" target="_blank">background-attachment</a></h3> Define se uma imagem de background está fixada ou rola junto com o resto da página.</li>
+        <p>{ background-attachment: scroll | fixed | local | initial | inherit ;} </p>
+          <ul>
+            <li>Scroll: a imagem de fundo vai rolar junto com a página. isso é o padrão</li>
+            <li>Fixed: a imagem de fundo não vai rolar com a página</li>
+            <li>Local: a imagem de fundo vai rolar com os conteúdos dos elementos.</li>
+            <li>Initial: Define essa propriedade(bg-attachment) para o seu valor padrão.</li>
+            <li>Inherit: herda essa propriedade(bg-attachment) do seu elemento pai.</li>
+          </ul>
+        <p>Exemplo de como criar um efeito de rolagem de paralaxe simples <a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_background-attachment_fixed" target="_blank">(cria uma ilusão de profundidade 3D):</a></p>
+
+        <p>
+          .fixed-bg { <br/>
+          |  <b>/* The background image */</b> <br/>
+          |  background-image: url("img_tree.gif"); <br/>
+          |  <br/>
+          |  <b>/* Set a specified height, or the minimum height for the background image */</b> <br/>
+          |  min-height: 500px; <br/>
+          |  <br/>
+          |  <b>/* Set background image to fixed (don't scroll along with the page) */</b> <br/>
+          |  background-attachment: fixed; <br/>
+          |  <br/>
+          |  <b>/* Center the background image */</b> <br/>
+          |  background-position: center; <br/>
+          |  <br/>
+          |  <b>/* Set the background image to no repeat */</b> <br/>
+          |  background-repeat: no-repeat; <br/>
+          |  <br/>
+          |  <b>/* Scale the background image to be as large as possible */</b> <br/>
+          |  background-size: cover; <br/>
+          }
+        </p>
+
+        <hr>
+        <li class="topicos"><h3><a href="https://www.w3schools.com/cssref/css3_pr_background-clip.asp" target="_blank">background-clip</a></h3> Especifica a área de pintura do background. Essa propriedade define até que ponto do background (color ou imagem) deve extender dentro de um elemento.</li>
+        <p>{ background-clip: border-box | padding-box | content-box | initial | inherit ;} </p>
+        <ul>
+          <li><strong>Border-box:</strong> É o valor padrão. O background se extende por trás da borda e vai até ela.</li>
+          <li><strong>Padding-box:</strong> O background se extende só até encostar na borda, preenche o conteúdo e a parte do padding.</li>
+          <li><strong>Content-box:</strong> O background se extende só até as limitações. Ex: No caso de um texto, por mais que o componente fosse grande, ele só teria esse fundo nas delimitações do texto.</li>
+          <li><strong>Initial:</strong> Define essa propriedade(bg-clip) para o seu valor padrão.</li>
+          <li><strong>Inherit:</strong> herda essa propriedade(bg-clip) do seu elemento pai.</li>
+        </ul>
+
+        <hr>
+        <li class="topicos"><h3><a href="https://www.w3schools.com/cssref/pr_background-color.asp" target="_blank">background-color</a></h3> Define a cor do background de algum elemento, não necessariamente da página.</li>
+        <p>{ background-color: nome_da_cor | transparent | initial | inherit ;} </p>
+        <p><strong>Escrevendo cores: </strong> red | #00FF00 | rgb(25,122,255) | rgba(0,0,0, 0-1) | transparent. </p>
+
+
+
+        <hr>
+        <li class="topicos"><h3><a href="https://www.w3schools.com/cssref/pr_background-image.asp" target="_blank">background-image</a></h3> Define uma imagem para o background de um elemento.</li>
+        <p>{ background-color: url("") | linear-gradient() | radial-gradient() | none | initial | inherit ;} </p>
+          <ul>
+            <li><strong>url("URL"): </strong>A url da imagem. Para especificar mais de uma imagem, precisa separar com uma VÍRGULA.</li>
+
+            <li><strong><a href="https://www.w3schools.com/cssref/func_linear-gradient.asp" target="_blank">linear-gradient("direção", "color 1", "color 2", ...):</a> </strong>Define um gradiente linear de cor como imagem de fundo. Tem que escolher pelo menos duas cores.</li>
+            <p>Ex: <br/>
+              background-image: linear-gradient(red, yellow, blue); <br/>
+              background-image: linear-gradient(to right, red , blue); <br/>
+              background-image: linear-gradient(to bottom right, red , blue); <br/>
+              background-image: linear-gradient(180deg, red, blue); <br/>
+              background-image: linear-gradient(0deg, red, blue); <br/>
+              background-image: linear-gradient(-90deg, red, blue); <br/>
+              background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet); <b><-- tipo arco-íris</b> <br/>
+              background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1)); <br/>
+            </p>
+
+            <li><strong><a href="https://www.w3schools.com/cssref/func_radial-gradient.asp" target="_blank">radial-gradient("shape(ellipse/circle) size(farthest-corner/closest-side/closest-corner/farthest-side)" at "position(center/porc_esquerda porc_direita)", "color 1", "color 2", ... , last color):</a> </strong></li>
+            <p>Ex: <br/>
+              background-image: radial-gradient(red, green, blue); <br/>
+              background-image: radial-gradient(red 5%, green 15%, blue 60%); <br/>
+              background-image: radial-gradient(circle, red, yellow, green); <br/>
+              background-image: radial-gradient(closest-side at 60% 55%, blue, green, yellow, black); <br/>
+              background-image: radial-gradient(farthest-side at 60% 55%, blue, green, yellow, black); <br/>
+            </p>
+
+            <li><strong>none: </strong> Nenhuma imagem de background será mostrada. É o padrão.</li>
+          </ul>
+
+       
+        <hr>
+        <li class="topicos"><h3><a href="https://www.w3schools.com/cssref/css3_pr_background-origin.asp" target="_blank">background-origin</a></h3> Especifica onde a imagem(ns) de background está(ão) posicionadas.</li>
+        <p>{ background-origin: padding-box | border-box | content-box | ;} </p>
+          <ul>
+            <li><strong>padding-box: </strong> Valor padrão. A imagem de background começa no lado superior esquerdo, na borda do padding.</li>
+            <li><strong>border-box: </strong> A imagem de background começa no lado superior esquerdo, mas já por trás da borda, ultrapassando o padding.</li>
+            <li><strong>content-box: </strong> A imagem de background começa no lado superior esquerdo do conteúdo. Ex: se fosse um texto, estaria dentro do bloquinho do texto, começando pelo canto superior esquerdo.</li>
+          </ul>
+          <p>Ex: Defina duas background-images em um elemento div, selecione uma para ser o background no cantinho esquerdo na borda do padding e outra para o cantinho esquerdo do conteúdo. <br/>
+            { <br/>
+            background: url(imagem_1.jpg), url(imagem_2.jpg); <br/>
+            background-origin: padding-box, content-box; <br/>
+            }
+            <br/>
+            <b>Importante ficar atento na ordem das imagens e dos parâmetros passados no bg-origin.</b>
+          </p>
+
+        <hr>
+        <li class="topicos"><h3><a href="https://www.w3schools.com/cssref/pr_background-position.asp" target="_blank">background-position</a></h3> Define a posição inicial de uma imagem de background.</li>
+        <p>{ background-position: (left,right,center) (top, center, bottom) faz o chuveirinho e escolhe o par que quiser | X% Y% | Xpos Ypos ;} </p>
+          <ul>
+            <li><strong>left top/left center/left bottom/right top/.../center bottom: </strong> Se for passado apenas um parâmetro, o outro será considerado "center".</li>
+            <li><strong>X% Y%: </strong>O primeiro valor é na horizontal (eixo x) e o segundo é na vertical (eixo y). O canto superior esquerdo está em 0% 0% (também é o valor default). O canto inferior direito está em 100% 100%. Se passar apenas um parâmetro, o outro será considerado 50%. </li>
+            <li><strong>Xpos Ypos: </strong>O primeiro valor é horizontal e o outro vertical. O canto superior esquerdo é 0px 0px (pode usar pixel ou qualquer outra unidade CSS, tipo rem). Se especificar apenas um valor, o outro será considerado 50%. Dá para misturar % com positions. </li>
+          </ul>
+
+        <hr>
+        <li class="topicos"><h3><a href="https://www.w3schools.com/cssref/pr_background-repeat.asp" target="_blank">background-repeat</a></h3> Define como uma imagem de background será repetida.</li>
+        <p>{ background-repeat: repeat | repeat-x | repeat-y | no-repeat | space | round | inicial | inherit ;}</p>
+          <ul>
+            <li><strong>repeat: </strong> Valor padrão. A imagem de fundo vai se repetir tanto horizontal quanto vertical. A última imagem será cortada se não couber.</li>
+            <li><strong>repeat-x: </strong> A imagen de fundo vai se repetir apenas horizontalmente.</li>
+            <li><strong>repeat-y: </strong> A imagem de fundo vai se repetir apenas verticalmente.</li>
+            <li><strong>no-repeat: </strong> A imagem de fundo não vai se repetir. Só aparece uma.</li>
+            <li><strong>space: </strong> A imagem de fundo será repetida o máximo que der sem ser cortada. A primeira e a última imagens são fixadas em ambos os lados do elemento, e os espaços em branco são distribuídos uniformememente entre as imagens.</li>
+            <li><strong>round: </strong> A imagem de fundo será repetida e comprimida ou esticada para preencher o espaço (sem lacunas).</li>
+          </ul>
+
+        <hr>
+        <li class="topicos"><h3><a href="https://www.w3schools.com/cssref/css3_pr_background-size.asp" target="_blank">background-size</a></h3> Especifica o tamanho da(s) imagem(ns) de background.</li>
+        <p>{ background-size: auto | length | cover | contain | initial | inherit ;}</p>
+          <ul>
+            <li><strong>auto: </strong> Valor padrão. A imagem de fundo é mostrada em seu tamanho original. </li>
+            <p>Ex: { background-size: auto ;}</p>
+
+            <li><strong>length: </strong> Define a largura e altura da imagem de fundo. O primeiro valor é para a largura e outro para altura. Se for passado somente um valor, o outro será considerado "auto".</li>
+            <p>Ex: { background-size: 100px 150px ;}</p>
+
+            <li><strong>percentage: </strong> Define a largura e altura da imagem por um par de porcentagens. O primeiro valor é para largura, o outro para altura. Se apenas um valor for passado, o outro será considerado "auto".</li>
+            <p>Ex: { background-size: 75% 100% ;}</p>
+
+            <li><strong>cover: </strong> Redimensiona a imagem de fundo para cobrir todo o contêiner, mesmo que seja necessário esticar a imagem ou cortar um pouco uma das bordas.</li>
+            <p>Ex: { background-size: cover ;}</p>
+
+            <li><strong>contain: </strong> Redimensiona a imagem de fundo para garantir que a imagem seja totalmente visível.</li>
+            <p>Ex: { background-size: contain ;}</p>
+          </ul>
+
+        <hr>
+        <li class="topicos"><h3><a href="https://www.w3schools.com/css/css_background_shorthand.asp" target="_blank">background</a></h3> Define todas as propriedades de background em uma única declaração.</li>
+          <p>{ background: bg-color bg-image position/bg-size bg-clip bg-attachment ;} </p>
+          <p>Exemplo: body { lightblue url("img_tree.gif") no-repeat fixed center ;}</p>
+          <p>Sintaxe em Javascript. Ex: object.style.background="red url(smiley.gif) top left no-repeat";</p>
+
+          <p><strong>Observação:</strong> se uma das propriedades na declaração abreviada for a propriedade bg-size, você deve usar uma / (barra) para separá-la da propriedade bg-position, por exemplo, plano de fundo: url (smiley.gif) 10px 20px / 50px 50px; resultará em uma imagem de fundo, posicionada a 10 pixels da esquerda, 20 pixels da parte superior e o tamanho da imagem será de 50 pixels de largura e 50 pixels de altura </p>
+
+          <p><strong>Nota:</strong> Se estiver usando várias fontes de background-image, mas também quiser um background-color, o parâmetro da cor de fundo precisa ser o último da lista. </p>
+        <hr>
+      </ul>
+  </body>
+</html>

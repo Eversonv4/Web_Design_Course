@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que se deve ser renderizada -->
+
+<html lang="pt-br">
+  <head>
+    <title>Border Radius</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Everson" />
+    <meta name="description" content="importante adicionar uma descrição da sua página, ela é aquele textinho que aparece abaixo dos links quando pesquisamos algo no google" />
+    <meta name="keywords" content="html5, tecnologia, web, etc." />
+    <style>
+      #alinhar {
+        display: inline-flex;
+        align-items: center;
+        background-color: rgba(255, 255, 0, 0.596);
+      }
+      p {
+        padding: 0 25px;
+      }
+      #radius {
+        background: orange;
+        height: 1px;
+        width: 100px;
+      }
+
+      .alinhar {
+        background: red;
+        height: 1px;
+        width: 100px;
+      }
+
+      #bloquinho {
+        background: orange;
+        width: 200px;
+        height: 200px;
+        margin: 50px auto;
+
+        border-radius: 60px 170px 60px 170px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Border Radius</h1>
+    <div id="alinhar">
+      <div id="radius"></div>
+      <p>Everson</p>
+      <div id="radius"></div>
+    </div>
+
+    <div id="bloquinho"></div>
+  </body>
+</html>
