@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estudando Flexbox</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Flexbox</h1>
+
+      <p>
+        Com o flexbox, você consegue flexibilizar o conteúdo de dentro da sua
+        tag & desbloqueia algumas outras propriedades do CSS, como por exemplo:
+      </p>
+      <ul class="main-title-list">
+        <li><strong>Justify-Content</strong></li>
+        <li><strong>Align-items</strong></li>
+        <li><strong>flex-wrap</strong></li>
+        <li><strong>flex-direction</strong></li>
+      </ul>
+
+      <section class="section-container">
+        <div class="cards card-1">1</div>
+        <div class="cards card-2">2</div>
+        <div class="cards card-3">3</div>
+      </section>
+
+      <article>
+        <div class="property-content">
+          <h3>Flex-Direction</h3>
+          <p>
+            Flex-direction representa a direção em que o nosso conteúdo de
+            dentro do container foi distribuido. Podendo receber os seguintes
+            valores:
+          </p>
+          <ul>
+            <li>flex-direction: <strong>row</strong>(linha)</li>
+            <li>flex-direction: <strong>row-reverse</strong></li>
+            <li>flex-direction: <strong>column</strong>(coluna)</li>
+            <li>flex-direction: <strong>column-reverse</strong></li>
+          </ul>
+        </div>
+
+        <div class="property-content">
+          <h3>Flex-Wrap</h3>
+          <p>
+            O flex-wrap serve para empacotar o conteúdo de dentro do seu
+            container. De uma forma que, se algum deles tiver um tamanho que
+            excessa a largura total da sua div/section/main/etc, ele será
+            automaticamente empacotado em outra linha.
+          </p>
+          <ul>
+            <li>flex-wrap: <strong>nowrap</strong> (Não empacote)</li>
+            <li>flex-wrap: <strong>wrap</strong> (empacote)</li>
+          </ul>
+        </div>
+
+        <div class="property-content">
+          <h3>Align-Items (alinha na vertical)</h3>
+          <p>
+            O align-items serve para você organizar o conteúdo de dentro do seu
+            container na vertical. Ou seja, você pode alinhar o conteúdo de
+            dentro no topo, no centro ou embaixo, de uma forma bem mais
+            tranquila, independente do tamanho dos seus elementos filhos.
+          </p>
+          <ul>
+            <li>align-items: <strong>center</strong></li>
+            <li>align-items: <strong>flex-start</strong></li>
+            <li>align-items: <strong>flex-end</strong></li>
+            <li>align-items: <strong>stretch</strong></li>
+            <li>align-items: <strong>baseline</strong></li>
+          </ul>
+        </div>
+
+        <div class="property-content">
+          <h3>Justify-Content (alinha na horizontal)</h3>
+          <p>
+            Se o 'align-items' servia para organizar os elementos filhos do
+            container, na vertical. O 'justity-content' serve para organizá-los
+            na horizontal. Permitindo uma distribuição por igual alinhando tudo
+            à esquerda, direita, no centro, com espaçamento entre os elementos,
+            assim como espamentos entre os elementos e o container que está
+            englobando os elementos filhos.
+          </p>
+          <ul>
+            <li>justify-content: <strong>center</strong></li>
+            <li>justify-content: <strong>flex-start</strong></li>
+            <li>justify-content: <strong>flex-end</strong></li>
+            <li>justify-content: <strong>space-between</strong></li>
+            <li>justify-content: <strong>space-around</strong></li>
+            <li>justify-content: <strong>space-evenly</strong></li>
+          </ul>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
